@@ -6,7 +6,7 @@ import Cartfield from '../src/cartfield.js'
 import Link from 'next/link'
 // import Home from './index'
 // import {option1} from './index'
-import Paypal from '../src/paypal'
+// import Paypal from '../src/paypal'
 export default function Checkout() {
 
   return (
@@ -14,8 +14,6 @@ export default function Checkout() {
       <Head>
         <title>Cupid Delights Checkout</title>
         <link rel="icon" href="/favicon.ico" />
-        <script src="https://www.paypal.com/sdk/js?client-id=AS8t-4KApnSdgE1-zg1Z5L-9OZBOUWPwsL-BZiMWFn_TxywrpykkO93H0uS5X9DXvfCvZHnpimmOPnAP&currency=GBP" data-sdk-integration-source="button-factory" async defer></script>
-
       </Head>
 
       <div className={styles.title}>

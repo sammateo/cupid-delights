@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import {useEffect, useRef} from 'react'
-export default function Paypal()
+import {useEffect, useRef,useState} from 'react'
+export default function Paypal({bill})
 {
-    const paypal = useRef()
+    let consumer = 0;
+    consumer+=bill;
     useEffect(()=>{
         window.paypal.Buttons({
             createOrder: (data,actions,err)=>{
@@ -13,7 +14,7 @@ export default function Paypal()
                             description : "Option 1",
                             amount: {
                                 currency_code: "GBP",
-                                value: 12.00
+                                value: consumer
                             }
                         }
                     ]
@@ -29,6 +30,9 @@ export default function Paypal()
             }
         }).render(paypal.current)
     }, [])
+
+    console.log(bill)
+    console.log(consumer)
     return(
         
         <div>

@@ -64,8 +64,6 @@ function Home() {
       }
     }
     const [checkout, setCheckout] = useState(false)
-    // const [paidFor,setPaidFor]=useState(false)
-    // const [loaded,setLoaded]=useState(false)
   return (
     <div className={styles.container}>
       <Head>
@@ -96,25 +94,21 @@ function Home() {
           <div className={styles.options}> */}
             <span>{formatter.format(price2)}</span><p>Option 2</p> <button value={option2} name ="option2" onClick={add} className="plusbutton"> + </button> <button name ="option2" onClick={minus} value={option2} className="minusbutton"> - </button>
           </div>
-          {/* <hr></hr> */}
+
           <div className={styles.cart}>
             <h2>Cart</h2>
-                {/* {option1}
-                {option2} */}
                 <Cartfield option1 = {option1} price1={price1}
                 option2 = {option2} price2={price2} total1={total1} total2={total2} total={total}/>
           </div>
 
-          {/* <Link href="/checkout">
+          {/* <Link href="/checkout">  //leads to a checkout page
                 <a><button className={styles.orderButton}>Checkout</button></a>
           </Link> */}
-          
-      </div>
-      <div>
-                {/* {
-                    checkout? <Paypal/> :
+          <div className={styles.paypalbuttons}>
+                {
+                    (total>0 && checkout)? <Paypal bill={total}/> :
                     <div>
-                        <button
+                        <button className={styles.orderButton}
                         
                         onClick={()=>{
                             setCheckout(true)
@@ -122,11 +116,13 @@ function Home() {
                         
                         >Checkout</button>
                     </div>
-                } */}
+                }
 
                 {/* <Paypal/> */}
 
             </div>
+      </div>
+            <script src="https://www.paypal.com/sdk/js?client-id=AS8t-4KApnSdgE1-zg1Z5L-9OZBOUWPwsL-BZiMWFn_TxywrpykkO93H0uS5X9DXvfCvZHnpimmOPnAP&currency=GBP" data-sdk-integration-source="button-factory" async defer></script>
       
     </div>
   )

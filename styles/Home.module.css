@@ -81,6 +81,15 @@
   font-weight: bold;
 }
 
+.paypalbuttons{
+  display:block;
+  width:500px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  /* border:3px solid black; */
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
