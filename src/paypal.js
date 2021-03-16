@@ -6,6 +6,14 @@ export default function Paypal({bill})
     consumer+=bill;
     useEffect(()=>{
         window.paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'blue',
+                layout: 'vertical',
+                label: 'paypal',
+                
+              },
+        
             createOrder: (data,actions,err)=>{
                 return actions.order.create({
                     intent: "CAPTURE",
@@ -24,6 +32,7 @@ export default function Paypal({bill})
             onApprove: async (data, actions) => {
                 const order = await actions.order.capture()
                 console.log(order);
+                
             },
             onError: (err) =>{
                 console.log(err)

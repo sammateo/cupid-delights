@@ -1,21 +1,29 @@
 .container{
   display:grid;
-  grid-template-rows:100px auto 100px;
+  grid-template-rows:120px auto 100px;
 }
 
 .title{
   display:block;
   text-align: center;
-  background-color:coral;
+  background-color:rgb(255, 255, 255);
   align-items: center;
   justify-content: center;
-  padding:30px;
+  padding:10px;
+  border-bottom: 4px solid red;
+  /* padding:30px; */
 }
 
 .title h1{
   display: block;
-  width:500px;
+  width:100px;
   margin:auto;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+.title h4{
+  word-spacing: 10px;
+  color:red;
 }
 
 .content{
@@ -33,7 +41,8 @@
 
 .logo{
   display:block;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  margin-bottom: 0;
 }
 
 .options{

@@ -69,10 +69,13 @@ function Home() {
       <Head>
         <title>Cupid Delights</title>
         <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/logo.jpeg" /> */}
+
       </Head>
 
       <div className={styles.title}>
           <h1>Cupid Delights</h1>
+          <h4>Made with love</h4>
       </div>
 
       <div className={styles.content}>
@@ -81,8 +84,8 @@ function Home() {
             <Image
               src="/../public/logo.jpeg"
               alt="logo"
-              width={70}
-              height={70}
+              width={90}
+              height={90}
               />
         </div>
           
