@@ -22,6 +22,17 @@ export default function Paypal({bill,option1,option2,price1,price2, name1, name2
         emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams).then(function (res) {})
     }
 
+    function sendEmailToOwner(name,body) {
+        // e.preventDefault();
+        var contactParams = {
+            to_email: "sammateo4@gmail.com",
+            to_name: name,
+            message: body
+        }
+    
+        emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams).then(function (res) {})
+    }
+
 
     var formatter = new Intl.NumberFormat('en-IN', {
         style: 'currency',
@@ -60,6 +71,10 @@ export default function Paypal({bill,option1,option2,price1,price2, name1, name2
                 console.log(order);
                 // console.log(data)
                 let email = prompt("Send reciept to?",order.payer.email_address)
+                if(email==null || email == " ")
+                {
+                    email = order.payer.email_address
+                }
                 let name = prompt("Name", order.payer.name.given_name + " " + order.payer.name.surname)
                 // alert (formatter.format(order.purchase_units[0].amount.value))
                 // alert (order.purchase_units[0].description)
@@ -73,6 +88,7 @@ export default function Paypal({bill,option1,option2,price1,price2, name1, name2
                 alert(body)
                 setApproved(true)
                 sendEmail(email,name,body)
+                sendEmailToOwner(name,body)
                 
             },
             onError: (err) =>{
