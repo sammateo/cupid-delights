@@ -1,6 +1,6 @@
 import styles from '../styles/cart.module.css'
 import {useState} from 'react'
-export default function Cartfield({option1,option2,total1,total2,total}){   
+export default function Cartfield({option1,option2,total1,total2,total,name1,name2}){   
     var formatter = new Intl.NumberFormat('en-IN', {
         style: 'currency',
         currency: 'GBP',
@@ -15,7 +15,7 @@ export default function Cartfield({option1,option2,total1,total2,total}){
                 {(option1==0 ||option1 ==null)?null:
                     <div className={styles.cartoption}>
                         <p> 
-                            Option1  
+                            {name1}  
                          </p>
                          <p>Quantity: {option1}</p>
                          <p>Price: {formatter.format(total1)}</p>
@@ -25,7 +25,7 @@ export default function Cartfield({option1,option2,total1,total2,total}){
                 {(option2==0||option2 == null)?null:
                 
                     <div className={styles.cartoption}>
-                        <p>Option2</p>
+                        <p>{name2}</p>
                         <p>Quantity: {option2}</p>
                         <p>Price: {formatter.format(total2)}</p>
                         </div>

@@ -10,4 +10,17 @@
     text-align:left;
     border-bottom: 3px solid black;
     /* border-top: 3px solid black; */
+    animation-name:cart;
+    animation-duration:1s;
+}
+
+@keyframes cart{
+    from{
+        opacity:0;
+        transform:translateY(-100px)
+    }
+    to{
+        opacity:1;
+        transform:translateY(0)
+    }
 }

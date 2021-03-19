@@ -5,28 +5,27 @@ import Cartfield from '../src/cartfield.js'
 import {useState} from 'react'
 import Link from 'next/link'
 import Paypal from '../src/paypal'
+import Confirm from '../src/confirm'
 
 function Home() {
-
+  const [checkout, setCheckout] = useState(false)
     // let option1 =0;
     var formatter = new Intl.NumberFormat('en-IN', {
       style: 'currency',
       currency: 'GBP',
-    
-      // These options are needed to round to whole numbers if that's what you want.
-      //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
-      //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
     });
-
+    const name1 ='Plain Roti Skin'
+    const name2 ='Dhal Puri Roti Skin'
     const [option1,setOption1] = useState(0)
     const [option2,setOption2] = useState(0)
-    const [price1,setPrice1] = useState(12.50)
-    const [price2,setPrice2] = useState(15.00)
+    const [price1,setPrice1] = useState(2)
+    const [price2,setPrice2] = useState(3)
     const [total,setTotal] = useState(0)
     const [total1,setTotal1] = useState(0)
     const [total2,setTotal2] = useState(0)
     function add(event)
     {
+      setCheckout(false)
         if(event.target.name == "option1")
         {
           event.target.value++;
@@ -47,6 +46,7 @@ function Home() {
 
     function minus(event)
     {
+      setCheckout(false)
       if(event.target.name == "option1" && option1 > 0)
       {
         event.target.value--;
@@ -63,13 +63,13 @@ function Home() {
         setTotal(total-price2)
       }
     }
-    const [checkout, setCheckout] = useState(false)
+    
   return (
     <div className={styles.container}>
       <Head>
         <title>Cupid Delights</title>
         <link rel="icon" href="/favicon.ico" />
-        {/* <link rel="icon" href="/logo.jpeg" /> */}
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
 
       </Head>
 
@@ -77,6 +77,8 @@ function Home() {
           <h1>Cupid Delights</h1>
           <h4>Made with love</h4>
       </div>
+
+
 
       <div className={styles.content}>
         
@@ -87,29 +89,27 @@ function Home() {
               width={90}
               height={90}
               />
+
+            
         </div>
-          
           <h2>Order Here</h2>
           <div className={styles.options}> 
-          <span>{formatter.format(price1)}</span><p>Option 1</p> <button name ="option1" value={option1} onClick={add} className="plusbutton"> + </button> <button name ="option1" onClick={minus} value={option1} className="minusbutton"> - </button>
+          <span>{formatter.format(price1)}</span><p>{name1}</p> <button name ="option1" value={option1} onClick={add} className="plusbutton"> + </button> <button name ="option1" onClick={minus} value={option1} className="minusbutton"> - </button>
             <br></br>
           {/* </div>
           <div className={styles.options}> */}
-            <span>{formatter.format(price2)}</span><p>Option 2</p> <button value={option2} name ="option2" onClick={add} className="plusbutton"> + </button> <button name ="option2" onClick={minus} value={option2} className="minusbutton"> - </button>
+            <span>{formatter.format(price2)}</span><p>{name2}</p> <button value={option2} name ="option2" onClick={add} className="plusbutton"> + </button> <button name ="option2" onClick={minus} value={option2} className="minusbutton"> - </button>
           </div>
 
           <div className={styles.cart}>
-            <h2>Cart</h2>
+            {total==0?<h2>Cart Empty</h2>:<h2>Cart</h2>}
                 <Cartfield option1 = {option1} price1={price1}
-                option2 = {option2} price2={price2} total1={total1} total2={total2} total={total}/>
+                option2 = {option2} price2={price2} total1={total1} total2={total2} total={total} name1={name1} name2={name2}/>
           </div>
-
-          {/* <Link href="/checkout">  //leads to a checkout page
-                <a><button className={styles.orderButton}>Checkout</button></a>
-          </Link> */}
           <div className={styles.paypalbuttons}>
                 {
-                    (total>0 && checkout)? <Paypal bill={total}/> :
+                    (total>0 && checkout)? <Paypal bill={total} option1 = {option1} price1={price1}
+                    option2 = {option2} price2={price2} name1={name1} name2={name2}/> :
                     <div>
                         <button className={styles.orderButton}
                         
@@ -121,12 +121,29 @@ function Home() {
                     </div>
                 }
 
-                {/* <Paypal/> */}
-
             </div>
+
       </div>
-            <script src="https://www.paypal.com/sdk/js?client-id=AS8t-4KApnSdgE1-zg1Z5L-9OZBOUWPwsL-BZiMWFn_TxywrpykkO93H0uS5X9DXvfCvZHnpimmOPnAP&currency=GBP" data-sdk-integration-source="button-factory" async defer></script>
+
+      <div className={styles.footer}>
+        <div>
+            <h3>Contact Information</h3>
+            <p>Call/Whatsapp +44 7432 577502</p>
+            {/* <p>Whatsapp +44 7432 577502</p> */}
+            <Link href="https://www.facebook.com/Cupid-Delights-103544264841798/?tn-str=k*F">
+                <a target="_blank">Facebook</a>
+            </Link>
+        </div>
+        
+        <p>Cupid Delights aims to satisfy your taste buds &amp; give you a taste of "home" with our delicious rotis. Enjoy Roti Fridays & Roti Skin Tuesdays via post so no one is left out.
+</p>
       
+      </div>
+
+
+            <script src="https://www.paypal.com/sdk/js?client-id=AS8t-4KApnSdgE1-zg1Z5L-9OZBOUWPwsL-BZiMWFn_TxywrpykkO93H0uS5X9DXvfCvZHnpimmOPnAP&currency=GBP" data-sdk-integration-source="button-factory" async defer></script>
+            {/* <script src="https://smtpjs.com/v3/smtp.js"> */}
+{/* </script> */}
     </div>
   )
 }
