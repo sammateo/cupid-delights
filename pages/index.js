@@ -26,6 +26,8 @@ function Home() {
     const[shipping1,setShipping1] = useState(5.57)
     const[shipping2,setShipping2] = useState(5.99)
     const[shipping3,setShipping3] = useState(7.99)
+    const[quantity,setQuantity] = useState(0)
+    
     function add(event)
     {
       setCheckout(false)
@@ -35,6 +37,7 @@ function Home() {
           setOption1(event.target.value)
           setTotal1(total1+price1)
           setTotal(total+price1)
+          setQuantity(quantity+1)
         }
 
         if(event.target.name == "option2")
@@ -43,8 +46,8 @@ function Home() {
           setOption2(event.target.value)
           setTotal2(total2+price2)
           setTotal(total+price2)
+          setQuantity(quantity+1)
         }
-        // console.log(event.target);
     }
 
     function minus(event)
@@ -56,6 +59,7 @@ function Home() {
         setOption1(event.target.value)
         setTotal1(total1-price1)
         setTotal(total-price1)
+        setQuantity(quantity-1)
       }
 
       if(event.target.name == "option2" && option2 > 0 )
@@ -64,23 +68,24 @@ function Home() {
         setOption2(event.target.value)
         setTotal2(total2-price2)
         setTotal(total-price2)
+        setQuantity(quantity-1)
       }
     }
 
 
     function checkoutFunc(){
-      let quant = Number(option1)+Number(option2);
-      if(quant >= 5 && quant <= 12){
+      //let quant = Number(option1)+Number(option2);
+      if(quantity >= 5 && quantity <= 12){
         alert("5.57")
       }
-      if(quant >=13 && quant <=19){
+      if(quantity >=13 && quantity <=19){
         alert("5.99")
       }
-      if(quant >=20 && quant <=40){
+      if(quantity >=20 && quantity <=40){
         alert("7.99")
       }
 
-      if(quant > 40){
+      if(quantity > 40){
         alert("Contact us for orders larger than 40 roti skins")
       }
     }
@@ -137,11 +142,11 @@ function Home() {
           <div className={styles.options}> */}
             <span>{formatter.format(price2)}</span><p>{name2}</p> <button value={option2} name ="option2" onClick={add} className="plusbutton"> + </button> <button name ="option2" onClick={minus} value={option2} className="minusbutton"> - </button>
           </div>
-
+          <p>{quantity}</p>
           <div className={styles.cart}>
             {total==0?<h2>Cart Empty</h2>:<h2>Cart</h2>}
                 <Cartfield option1 = {option1} price1={price1}
-                option2 = {option2} price2={price2} total1={total1} total2={total2} total={total} name1={name1} name2={name2}/>
+                option2 = {option2} price2={price2} total1={total1} total2={total2} total={total} name1={name1} name2={name2} quantity={quantity}/>
           </div>
           {/* <div className={styles.paypalbuttons}>
                 {

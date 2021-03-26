@@ -1,6 +1,6 @@
 import styles from '../styles/cart.module.css'
-import {useState} from 'react'
-export default function Cartfield({option1,option2,total1,total2,total,name1,name2}){   
+import {useState,usEffect} from 'react'
+export default function Cartfield({option1,option2,total1,total2,total,name1,name2, quantity}){   
     var formatter = new Intl.NumberFormat('en-IN', {
         style: 'currency',
         currency: 'GBP',
@@ -10,7 +10,7 @@ export default function Cartfield({option1,option2,total1,total2,total,name1,nam
         //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
       });
 
-      const[shipping1,setShipping1] = useState(5.57)
+    const[shipping1,setShipping1] = useState(5.57)
     const[shipping2,setShipping2] = useState(5.99)
     const[shipping3,setShipping3] = useState(7.99)
     
@@ -39,6 +39,11 @@ export default function Cartfield({option1,option2,total1,total2,total,name1,nam
                 <div>
                 <p>Total: {formatter.format(total)}</p>
                 <p>Quantity: {Number(option1)+Number(option2)}</p>
+                <p>Shipping: {(quantity >= 5 && quantity <= 12)?shipping1:
+                (quantity >=13 && quantity <=19)?shipping2:
+                (quantity >=20 && quantity <=40)?shipping3:
+            (quantity > 40)?
+        alert("Contact us for orders larger than 40 roti skins"):null}</p>
                 </div>}
                 
                 
