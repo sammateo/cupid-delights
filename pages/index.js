@@ -5,6 +5,9 @@ import Cartfield from '../src/cartfield.js'
 import {useState} from 'react'
 import Link from 'next/link'
 import Paypal from '../src/paypal'
+import emailjs from 'emailjs-com';
+import{ init } from 'emailjs-com';
+init("user_I8maVpumJJ5NPgSnOdsDM");
 
 
 function Home() {
@@ -73,24 +76,52 @@ function Home() {
     }
 
 
-    function checkoutFunc(){
-      //let quant = Number(option1)+Number(option2);
-      if(quantity<5){
-        alert("Minimum order is 5 roti skins")
+    function sendEmail(email,name,body) {
+      // e.preventDefault();
+      var contactParams = {
+          to_email: email,
+          to_name: name,
+          message: body
       }
-      if(quantity >= 5 && quantity <= 12){
-        alert("5.57")
-      }
-      if(quantity >=13 && quantity <=19){
-        alert("5.99")
-      }
-      if(quantity >=20 && quantity <=40){
-        alert("7.99")
-      }
+  
+      emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams).then(function (res) {})
+  }
 
-      if(quantity > 40){
-        alert("Contact us for orders larger than 40 roti skins")
-      }
+
+  function sendEmailToOwner(name,body) {
+    // e.preventDefault();
+    var contactParams = {
+        to_email: "sammateo4@gmail.com",
+        to_name: name,
+        message: body
+    }
+
+    emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams).then(function (res) {})
+}
+
+    function checkoutFunc(){
+      setCheckout(true)
+      //let quant = Number(option1)+Number(option2);
+      // if(quantity<5){
+      //   alert("Minimum order is 5 roti skins")
+      // }
+      // if(quantity >= 5 && quantity <= 12){
+      //   alert("5.57")
+      // }
+      // if(quantity >=13 && quantity <=19){
+      //   alert("5.99")
+      // }
+      // if(quantity >=20 && quantity <=40){
+      //   alert("7.99")
+      // }
+
+      // if(quantity > 40){
+      //   alert("Contact us for orders larger than 40 roti skins")
+      // }
+
+      
+
+      
     }
     
   return (
@@ -128,16 +159,16 @@ function Home() {
 
       <div className={styles.content}>
         
-        <div className={styles.logo}>
+        {/* <div className={styles.logo}>
             <Image
               src="/../public/logo.jpeg"
               alt="logo"
               width={90}
               height={90}
               />
-        </div>
+        </div> */}
           <h2>Order Here</h2>
-          <p>Note: Minimum order of 5 roti skins</p>
+          <p>Note: Minimum order is 5 roti skins</p>
           <div className={styles.options}> 
           <span>{formatter.format(price1)}</span><p>{name1}</p> <button name ="option1" value={option1} onClick={add} className="plusbutton"> + </button> <button name ="option1" onClick={minus} value={option1} className="minusbutton"> - </button>
             <br></br>
@@ -145,7 +176,7 @@ function Home() {
           <div className={styles.options}> */}
             <span>{formatter.format(price2)}</span><p>{name2}</p> <button value={option2} name ="option2" onClick={add} className="plusbutton"> + </button> <button name ="option2" onClick={minus} value={option2} className="minusbutton"> - </button>
           </div>
-          <p>{quantity}</p>
+          {/* <p>{quantity}</p> */}
           <div className={styles.cart}>
             {total==0?<h2>Cart Empty</h2>:<h2>Cart</h2>}
                 <Cartfield option1 = {option1} price1={price1}
@@ -171,6 +202,13 @@ function Home() {
             <button className={styles.orderButton} onClick={checkoutFunc}>Checkout</button>
             
       </div>
+
+
+
+
+
+
+
 
       <div className={styles.footer}>
         <div>

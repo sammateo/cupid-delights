@@ -38,7 +38,7 @@ export default function Cartfield({option1,option2,total1,total2,total,name1,nam
                 {((option1==0 ||option1 ==null)&&(option2==0||option2 == null))?null:
                 <div>
                 <p>Total: {formatter.format(total)}</p>
-                <p>Quantity: {Number(option1)+Number(option2)}</p>
+                {/* <p>Quantity: {Number(option1)+Number(option2)}</p> */}
                 <p>Shipping: {(quantity >= 5 && quantity <= 12)?shipping1:
                 (quantity >=13 && quantity <=19)?shipping2:
                 (quantity >=20 && quantity <=40)?shipping3:
