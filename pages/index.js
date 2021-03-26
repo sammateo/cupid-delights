@@ -75,6 +75,9 @@ function Home() {
 
     function checkoutFunc(){
       //let quant = Number(option1)+Number(option2);
+      if(quantity<5){
+        alert("Minimum order is 5 roti skins")
+      }
       if(quantity >= 5 && quantity <= 12){
         alert("5.57")
       }

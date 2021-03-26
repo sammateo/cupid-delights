@@ -176,7 +176,7 @@
   border-top: 4px solid red;
   padding:10px;
   display:grid;
-  grid-template-columns: 300px 500px;;
+  grid-template-columns: 1fr 2fr 2fr;
 }
 
 @media (max-width: 600px) {
@@ -193,5 +193,6 @@
   .footer{
     width:100%;
     border-bottom: 4px solid red;
+    grid-template-columns: 1fr 2fr;
   }
 }
