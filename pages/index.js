@@ -5,7 +5,7 @@ import Cartfield from '../src/cartfield.js'
 import {useState} from 'react'
 import Link from 'next/link'
 import Paypal from '../src/paypal'
-import Confirm from '../src/confirm'
+
 
 function Home() {
   const [checkout, setCheckout] = useState(false)
@@ -16,13 +16,16 @@ function Home() {
     });
     const name1 ='Plain Roti Skin'
     const name2 ='Dhal Puri Roti Skin'
-    const [option1,setOption1] = useState(0)
-    const [option2,setOption2] = useState(0)
+    const [option1,setOption1] = useState(0)//quantity of option1
+    const [option2,setOption2] = useState(0)//quantity of option2
     const [price1,setPrice1] = useState(2)
     const [price2,setPrice2] = useState(3)
     const [total,setTotal] = useState(0)
     const [total1,setTotal1] = useState(0)
     const [total2,setTotal2] = useState(0)
+    const[shipping1,setShipping1] = useState(5.57)
+    const[shipping2,setShipping2] = useState(5.99)
+    const[shipping3,setShipping3] = useState(7.99)
     function add(event)
     {
       setCheckout(false)
@@ -63,6 +66,24 @@ function Home() {
         setTotal(total-price2)
       }
     }
+
+
+    function checkoutFunc(){
+      let quant = Number(option1)+Number(option2);
+      if(quant >= 5 && quant <= 12){
+        alert("5.57")
+      }
+      if(quant >=13 && quant <=19){
+        alert("5.99")
+      }
+      if(quant >=20 && quant <=40){
+        alert("7.99")
+      }
+
+      if(quant > 40){
+        alert("Contact us for orders larger than 40 roti skins")
+      }
+    }
     
   return (
     <div className={styles.container}>
@@ -79,6 +100,23 @@ function Home() {
       </div>
 
 
+      <div className={styles.additionalInfo}>
+          <div className={styles.shippingInfo}>
+
+            <h2>Shipping</h2>
+            <p>5-12 rotis </p>
+            <p>{formatter.format(shipping1)}</p>
+            <p>13-19 rotis</p>
+            <p>{formatter.format(shipping2)}</p>
+            <p>20-40 rotis</p>
+            <p >{formatter.format(shipping3)}</p>
+            <p className={styles.larger}>Contact us for larger orders</p>
+          </div>
+
+          
+
+        </div>
+
 
       <div className={styles.content}>
         
@@ -89,10 +127,9 @@ function Home() {
               width={90}
               height={90}
               />
-
-            
         </div>
           <h2>Order Here</h2>
+          <p>Note: Minimum order of 5 roti skins</p>
           <div className={styles.options}> 
           <span>{formatter.format(price1)}</span><p>{name1}</p> <button name ="option1" value={option1} onClick={add} className="plusbutton"> + </button> <button name ="option1" onClick={minus} value={option1} className="minusbutton"> - </button>
             <br></br>
@@ -106,7 +143,7 @@ function Home() {
                 <Cartfield option1 = {option1} price1={price1}
                 option2 = {option2} price2={price2} total1={total1} total2={total2} total={total} name1={name1} name2={name2}/>
           </div>
-          <div className={styles.paypalbuttons}>
+          {/* <div className={styles.paypalbuttons}>
                 {
                     (total>0 && checkout)? <Paypal bill={total} option1 = {option1} price1={price1}
                     option2 = {option2} price2={price2} name1={name1} name2={name2}/> :
@@ -121,8 +158,10 @@ function Home() {
                     </div>
                 }
 
-            </div>
-
+            </div> */}
+            {/* {((option1+option2)>5)?<button className={styles.orderButton}>Checkout</button>:null} */}
+            <button className={styles.orderButton} onClick={checkoutFunc}>Checkout</button>
+            
       </div>
 
       <div className={styles.footer}>

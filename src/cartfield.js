@@ -9,6 +9,10 @@ export default function Cartfield({option1,option2,total1,total2,total,name1,nam
         //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
         //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
       });
+
+      const[shipping1,setShipping1] = useState(5.57)
+    const[shipping2,setShipping2] = useState(5.99)
+    const[shipping3,setShipping3] = useState(7.99)
     
     return(
         <div className={styles.container} >
@@ -31,7 +35,12 @@ export default function Cartfield({option1,option2,total1,total2,total,name1,nam
                         </div>
                 }
 
-                {((option1==0 ||option1 ==null)&&(option2==0||option2 == null))?null:<p>Total: {formatter.format(total)}</p>}
+                {((option1==0 ||option1 ==null)&&(option2==0||option2 == null))?null:
+                <div>
+                <p>Total: {formatter.format(total)}</p>
+                <p>Quantity: {Number(option1)+Number(option2)}</p>
+                </div>}
+                
                 
         </div>
         )
