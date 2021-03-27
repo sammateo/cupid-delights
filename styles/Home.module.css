@@ -183,7 +183,11 @@
 
   .container{
     width:100%;
-    grid-template-rows:120px 300px auto 180px;
+    grid-template-rows:120px 300px auto 200px;
+  }
+
+  .content{
+    width: 450px;
   }
 
   .additionalInfo{

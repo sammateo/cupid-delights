@@ -1,0 +1,48 @@
+.form{
+    display: block;
+    /* border:2px solid black; */
+    display:grid;
+    grid-template-columns:1fr;
+    
+}
+
+.form input{
+    /* border:2px solid blue; */
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+    border:none;
+    outline:none;
+    border-bottom: 2px solid black;
+}
+
+.form label{
+    /* border:2px solid yellow; */
+    padding: 0;
+    /* width:50%; */
+    height:50px;
+}
+.form textarea{
+    border:2px solid black;
+    height:100px;
+    width:80%;
+    /* border:none; */
+    padding:20px;
+    margin-left: auto;
+    margin-right:auto;
+    resize:none;
+    outline:none;
+}
+
+.button{
+    width:100px;
+    padding:10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right:auto;
+    border:2px solid black;
+    background-color:black;
+    color:white;
+    font-weight: bold;
+}
