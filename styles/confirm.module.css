@@ -10,10 +10,13 @@
     /* border:2px solid blue; */
     margin-left:auto;
     margin-right:auto;
+    padding:5px;
+    height:35px;
     width:50%;
     border:none;
     outline:none;
     border-bottom: 2px solid black;
+    border-radius: 0;
 }
 
 .form label{
@@ -21,6 +24,7 @@
     padding: 0;
     /* width:50%; */
     height:50px;
+    border-radius: 0;
 }
 .form textarea{
     border:2px solid black;
@@ -32,6 +36,7 @@
     margin-right:auto;
     resize:none;
     outline:none;
+    border-radius: 0;
 }
 
 .button{
@@ -45,4 +50,20 @@
     background-color:black;
     color:white;
     font-weight: bold;
+}
+
+
+.button:active{
+    background-color:white;
+    color:black;
+    /* border:3px solid black; */
+}
+
+.form p{
+    width:90%;
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    border-top:4px solid black;
+    border-bottom:4px solid black;
 }

@@ -30,6 +30,7 @@ function Home() {
     const[shipping1,setShipping1] = useState(5.57)
     const[shipping2,setShipping2] = useState(5.99)
     const[shipping3,setShipping3] = useState(7.99)
+    const [shipping,setShipping] = useState(0)
     const[quantity,setQuantity] = useState(0)
     
     function add(event)
@@ -101,24 +102,29 @@ function Home() {
 }
 
     function checkoutFunc(){
-      setCheckout(true)
+      
       //let quant = Number(option1)+Number(option2);
-      // if(quantity<5){
-      //   alert("Minimum order is 5 roti skins")
-      // }
-      // if(quantity >= 5 && quantity <= 12){
-      //   alert("5.57")
-      // }
-      // if(quantity >=13 && quantity <=19){
-      //   alert("5.99")
-      // }
-      // if(quantity >=20 && quantity <=40){
-      //   alert("7.99")
-      // }
+      if(quantity<5){
+        alert("Minimum order is 5 roti skins")
+        setCheckout(false)
+      }
+      if(quantity >= 5 && quantity <= 12){
+        setShipping(shipping1)
+        setCheckout(true)
+      }
+      if(quantity >=13 && quantity <=19){
+        setShipping(shipping2)
+        setCheckout(true)
+      }
+      if(quantity >=20 && quantity <=40){
+        setShipping(shipping3)
+        setCheckout(true)
+      }
 
-      // if(quantity > 40){
-      //   alert("Contact us for orders larger than 40 roti skins")
-      // }
+      if(quantity > 40){
+        alert("Contact us for orders larger than 40 roti skins")
+        setCheckout(true)
+      }
 
       
 
@@ -201,16 +207,22 @@ function Home() {
             </div> */}
             {/* {((option1+option2)>5)?<button className={styles.orderButton}>Checkout</button>:null} */}
             <button className={styles.orderButton} onClick={checkoutFunc}>Checkout</button>
-            {(checkout && total !=0 )?<Confirm 
+            {(checkout && total !=0 && quantity>= 5)?<Confirm 
             option1 = {option1} price1={price1} total1={total1} total2={total2} total={total}
             option2 = {option2} price2={price2}  name1={name1} name2={name2} quantity={quantity}
+            shipping={shipping}
             />:null}
       </div>
 
 
 
 
-
+      <div className={styles.galleryButtonContainer}>
+        <Link href="/gallery">
+          <button>To Gallery</button>
+        </Link>
+        
+      </div>
 
 
 
