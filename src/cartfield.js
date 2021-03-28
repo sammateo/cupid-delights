@@ -42,8 +42,7 @@ export default function Cartfield({option1,option2,total1,total2,total,name1,nam
                 <p>Shipping: {(quantity >= 5 && quantity <= 12)?formatter.format(shipping1):
                 (quantity >=13 && quantity <=19)?formatter.format(shipping2):
                 (quantity >=20 && quantity <=40)?formatter.format(shipping3):
-            (quantity > 40)?
-        alert("Contact us for orders larger than 40 roti skins"):null}</p>
+                null}</p>
                 </div>}
                 
                 

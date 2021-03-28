@@ -12,7 +12,7 @@ export default function Gallery(){
                     <div className={styles.logo}>
                     <Image
                       src={img}
-                      alt="logo"
+                      alt="galleryimg"
                       width={300}
                       height={300}
                       />
