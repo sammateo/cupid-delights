@@ -3,7 +3,7 @@ import styles from '../styles/gallery.module.css'
 import Image from 'next/image'
 export default function Gallery(){
 
-    let imgarray = ["/../public/logo.jpeg","/../public/roti.jpg"]
+    let imgarray = ["/logo.jpeg","/roti.jpg"]
     return(
         <div className={styles.container}>
             <h1>Gallery</h1>

@@ -16,18 +16,6 @@ export default function Confirm({option1,option2,price1,price2,total1,total2,tot
                 "Quantity: " + quantity + " |\n" + 
                 "Shipping: " + formatter.format(shipping) + " |\n" + 
                 "Total: " + formatter.format(Number(total+shipping)) 
-    // function sendEmail(e) {
-    //      e.preventDefault()
-    //      console.log(result)
-    //     var contactParams = {
-    //         to_email: email,
-    //         to_name: name,
-    //         message: body
-    //     }
-    
-    //     //emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams).then(function (res) {})
-    // }
-
 
     function sendEmail(e) {
         e.preventDefault();
