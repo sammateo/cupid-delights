@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
 init("user_I8maVpumJJ5NPgSnOdsDM");
 
-export default function Confirm({option1,option2,price1,price2,total1,total2,total,name1,name2, quantity,shipping}){
+export default function Confirm({option1,option2,price1,price2,total1,total2,total,name1,name2, quantity,shipping,nextDay}){
 
     var formatter = new Intl.NumberFormat('en-IN', {
         style: 'currency',
@@ -28,11 +28,31 @@ export default function Confirm({option1,option2,price1,price2,total1,total2,tot
           });
       }
 
+
+      function sendEmailToOwner(e) {
+        e.preventDefault();
+        
+        // console.log(e.target.querySelector("input[name = 'to_name']").value)
+        // console.log(e.target.querySelector("input[name = 'contact_number']").value)
+        // console.log(e.target.querySelector("input[name = 'address']").value)
+        // console.log(e.target.querySelector("input[name = 'country']").value)
+        // console.log(e.target.querySelector("textarea[name = 'message']").value)
+        var contactParams = {
+            to_email: "sammateo4@gmail.com",
+            to_name: e.target.querySelector("input[name = 'to_name']").value,
+            address:e.target.querySelector("input[name = 'address']").value,
+            country:e.target.querySelector("input[name = 'country']").value,
+            contact_number:e.target.querySelector("input[name =contact_number]").value,
+            message: body
+        }
+        emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams)
+        //.then(function (res) {})
+    }
+
     return(
-// Shipping address to be put in 
         <div>
             {/* onSubmit={sendEmail} */}
-            <form className={styles.form} onSubmit={sendEmail} >
+            <form className={styles.form} onSubmit={(e)=> {sendEmail(e); sendEmailToOwner(e);}} >
             <p>Shipping</p>
             <label>Name</label>
             <input type="text" name="to_name" required />

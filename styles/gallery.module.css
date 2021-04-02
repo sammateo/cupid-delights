@@ -31,7 +31,7 @@
   text-align:center;
   grid-template-columns:1fr 1fr 1fr;
   grid-gap:5px;
-  grid-auto-flow: dense;
+  grid-auto-flow:dense;
   justify-content: center;
 }
 .logo{
@@ -40,13 +40,13 @@
   text-align: center;
 }
 
-.logo img{
+.logo img, .logo video{
   border:2px solid black;
   padding:5px;
   transition: 1s ease-in-out;
 }
 
-.logo img:hover{
+.logo img:hover, .logo video:hover{
   border-radius:25px;
   width:400px;
   /* width:auto; */
@@ -68,9 +68,23 @@
   color:black;
 }
 
+@media screen and (max-width:1024px){
+  .gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
 @media screen and (max-width:768px){
   .gallery{
     grid-template-columns:1fr;
   }
 
 }
+
+/* @media screen and (max-width:600px){
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+} */

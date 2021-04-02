@@ -8,6 +8,7 @@ import Paypal from '../src/paypal'
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
 import Confirm from '../src/confirm'
+import next from 'next'
 init("user_I8maVpumJJ5NPgSnOdsDM");
 
 
@@ -31,6 +32,10 @@ function Home() {
     const[shipping2,setShipping2] = useState(5.99)
     const[shipping3,setShipping3] = useState(7.99)
     const [shipping,setShipping] = useState(0)
+    const[nextshipping1,setNextShipping1] = useState(7.99)
+    const[nextshipping2,setNextShipping2] = useState(8.59)
+    const[nextshipping3,setNextShipping3] = useState(8.99)
+    const [nextDay, setNextDay] = useState(null)
     const[quantity,setQuantity] = useState(0)
     
     function add(event)
@@ -78,28 +83,28 @@ function Home() {
     }
 
 
-    function sendEmail(email,name,body) {
-      // e.preventDefault();
-      var contactParams = {
-          to_email: email,
-          to_name: name,
-          message: body
-      }
+  //   function sendEmail(email,name,body) {
+  //     // e.preventDefault();
+  //     var contactParams = {
+  //         to_email: email,
+  //         to_name: name,
+  //         message: body
+  //     }
   
-      emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams).then(function (res) {})
-  }
+  //     emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams).then(function (res) {})
+  // }
 
 
-  function sendEmailToOwner(name,body) {
-    // e.preventDefault();
-    var contactParams = {
-        to_email: "sammateo4@gmail.com",
-        to_name: name,
-        message: body
-    }
+//   function sendEmailToOwner(name,body) {
+//     // e.preventDefault();
+//     var contactParams = {
+//         to_email: "sammateo4@gmail.com",
+//         to_name: name,
+//         message: body
+//     }
 
-    emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams).then(function (res) {})
-}
+//     emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams).then(function (res) {})
+// }
 
     function checkoutFunc(){
       
@@ -109,15 +114,15 @@ function Home() {
         setCheckout(false)
       }
       if(quantity >= 5 && quantity <= 12){
-        setShipping(shipping1)
+        nextDay?setShipping(nextshipping1):setShipping(shipping1)
         setCheckout(true)
       }
       if(quantity >=13 && quantity <=19){
-        setShipping(shipping2)
+        nextDay?setShipping(nextshipping2):setShipping(shipping2)
         setCheckout(true)
       }
       if(quantity >=20 && quantity <=40){
-        setShipping(shipping3)
+        nextDay?setShipping(nextshipping3):setShipping(shipping3)
         setCheckout(true)
       }
 
@@ -125,17 +130,20 @@ function Home() {
         alert("Contact us for orders larger than 40 roti skins")
         setCheckout(true)
       }
-
-      
-
-      
     }
+
+  function changeShipType(event){
+    setCheckout(false)
+      event.target.id == "nextDay" ? setNextDay(true):setNextDay(false)
+     // console.log(nextDay)
+  }
     
   return (
     <div className={styles.container}>
       <Head>
         <title>Cupid Delights</title>
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/logo.jpeg" />
         <script src="https://smtpjs.com/v3/smtp.js"></script>
 
       </Head>
@@ -149,7 +157,7 @@ function Home() {
       <div className={styles.additionalInfo}>
           <div className={styles.shippingInfo}>
 
-            <h2>Shipping</h2>
+            <h2>Standard Shipping</h2>
             <p>5-12 rotis </p>
             <p>{formatter.format(shipping1)}</p>
             <p>13-19 rotis</p>
@@ -157,6 +165,19 @@ function Home() {
             <p>20-40 rotis</p>
             <p >{formatter.format(shipping3)}</p>
             <p className={styles.larger}>Contact us for larger orders</p>
+          </div>
+         
+          <div className={styles.shippingInfo}>
+
+            <h2>Next Day Shipping</h2>
+            <p>5-12 rotis </p>
+            <p>{formatter.format(nextshipping1)}</p>
+            <p>13-19 rotis</p>
+            <p>{formatter.format(nextshipping2)}</p>
+            <p>20-40 rotis</p>
+            <p >{formatter.format(nextshipping3)}</p>
+            <p className={styles.larger}>Contact us for larger orders</p>
+            <p className={styles.larger}>Guaranteed 12 noon next day</p>
           </div>
 
           
@@ -184,11 +205,27 @@ function Home() {
             <span>{formatter.format(price2)}</span><p>{name2}</p> <button value={option2} name ="option2" onClick={add} className="plusbutton"> + </button> <button name ="option2" onClick={minus} value={option2} className="minusbutton"> - </button>
           </div>
           {/* <p>{quantity}</p> */}
+
+
+          <div className={styles.nextDay}>
+            {/* <p>{nextDay?"Nextday":"standard"}</p> */}
+            <label htmlFor="nextDay">Shipping Type</label>
+              <p><input type="radio" id="standard" name="nextDay" onChange={changeShipType}></input><span>Standard</span></p>
+              <p><input type="radio" id="nextDay" name="nextDay" onChange={changeShipType}></input><span>Next Day</span></p>
+
+          </div>
+
+
+
           <div className={styles.cart}>
             {total==0?<h2>Cart Empty</h2>:<h2>Cart</h2>}
                 <Cartfield option1 = {option1} price1={price1}
-                option2 = {option2} price2={price2} total1={total1} total2={total2} total={total} name1={name1} name2={name2} quantity={quantity}/>
+                option2 = {option2} price2={price2} total1={total1} total2={total2} total={total} name1={name1} name2={name2} quantity={quantity} nextDay={nextDay}/>
           </div>
+
+
+          
+
           {/* <div className={styles.paypalbuttons}>
                 {
                     (total>0 && checkout)? <Paypal bill={total} option1 = {option1} price1={price1}
@@ -210,7 +247,7 @@ function Home() {
             {(checkout && total !=0 && quantity>= 5 && quantity<=40)?<Confirm 
             option1 = {option1} price1={price1} total1={total1} total2={total2} total={total}
             option2 = {option2} price2={price2}  name1={name1} name2={name2} quantity={quantity}
-            shipping={shipping}
+            shipping={shipping} nextDay={nextDay}
             />:null}
       </div>
 
@@ -236,7 +273,7 @@ function Home() {
             </Link>
         </div>
         
-        <p>Cupid Delights aims to satisfy your taste buds &amp; give you a taste of "home" with our delicious rotis. Enjoy Roti Fridays & Roti Skin Tuesdays via post so no one is left out.
+        <p>Cupid Delights aims to satisfy your taste buds &amp; give you a taste of "home" with our delicious roti skins delivered straight to your door via our swift postal service.
 </p>
       
       </div>

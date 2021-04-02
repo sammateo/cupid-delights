@@ -57,7 +57,7 @@
 
 .additionalInfo{
   display:grid;
-  grid-template-columns:1fr;
+  grid-template-columns:1fr 1fr;
   grid-gap: 20px;
 }
 .shippingInfo{
@@ -149,7 +149,26 @@
   color:black;
 }
 
+.nextDay{
+  /* border:2px solid black; */
+  text-align: center;
+  display:grid;
+  grid-template-columns:1fr;
+}
 
+.nextDay p{
+  width:300px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  transform:translateX(-10px);
+}
+
+.nextDay input{
+  /* width:40px; */
+   /* margin-left:10px; */
+  margin-right:10px; 
+}
 
 .orderButton{
   margin-top: 40px;
@@ -208,7 +227,7 @@
 
   .container{
     width:100%;
-    /* grid-template-rows:120px 300px auto 100 200px; */
+    grid-template-rows:120px 600px auto 70px 200px;
   }
 
   .options p{
