@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "out": "next build && next export"
+    "build": "next build && next export",
+    "start": "next start"
   },
   "dependencies": {
     "emailjs-com": "^2.6.4",
