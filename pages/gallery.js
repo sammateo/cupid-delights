@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styles from '../styles/gallery.module.css'
-import Image from 'next/image'
+//import Image from 'next/image'
 export default function Gallery(){
 
     let imgarray = ["/logo.jpeg","/roti.jpg","/roll.jpg","/gallery1.jpg","/gallery2.jpg","/gallery3.jpg",

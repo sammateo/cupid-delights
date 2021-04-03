@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Image from 'next/image'
+//import Image from 'next/image'
 import Cartfield from '../src/cartfield.js'
 import {useState} from 'react'
 import Link from 'next/link'
@@ -83,32 +83,8 @@ function Home() {
     }
 
 
-  //   function sendEmail(email,name,body) {
-  //     // e.preventDefault();
-  //     var contactParams = {
-  //         to_email: email,
-  //         to_name: name,
-  //         message: body
-  //     }
-  
-  //     emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams).then(function (res) {})
-  // }
-
-
-//   function sendEmailToOwner(name,body) {
-//     // e.preventDefault();
-//     var contactParams = {
-//         to_email: "sammateo4@gmail.com",
-//         to_name: name,
-//         message: body
-//     }
-
-//     emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams).then(function (res) {})
-// }
-
     function checkoutFunc(){
-      
-      //let quant = Number(option1)+Number(option2);
+
       if(quantity<5){
         alert("Minimum order is 5 roti skins")
         setCheckout(false)
@@ -188,7 +164,7 @@ function Home() {
       <div className={styles.content}>
         
         <div className={styles.logo}>
-            <Image
+            <img
               src="/logo.jpeg"
               alt="logo"
               width={90}
