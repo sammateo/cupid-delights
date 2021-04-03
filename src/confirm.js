@@ -38,12 +38,17 @@ export default function Confirm({option1,option2,price1,price2,total1,total2,tot
         // console.log(e.target.querySelector("input[name = 'address']").value)
         // console.log(e.target.querySelector("input[name = 'country']").value)
         // console.log(e.target.querySelector("textarea[name = 'message']").value)
+        let additional = e.target.querySelector("textarea[name = 'addInfo']").value == null ? "None": e.target.querySelector("input[name ='addInfo']")
+        if(additional == ""){
+            additional = "none"
+        }
         var contactParams = {
             to_email: "sammateo4@gmail.com",
             to_name: e.target.querySelector("input[name = 'to_name']").value,
             address:e.target.querySelector("input[name = 'address']").value,
             country:e.target.querySelector("input[name = 'country']").value,
             contact_number:e.target.querySelector("input[name =contact_number]").value,
+            addInfo:additional,
             message: body
         }
         emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams)
@@ -67,6 +72,8 @@ export default function Confirm({option1,option2,price1,price2,total1,total2,tot
             <input type="text" name="country" required />
             <label>Order</label>
             <textarea name="message" value={body} readOnly/>
+            <label>Additional Info</label>
+            <textarea name="addInfo" placeholder="Notes for order"/>
             {/* <input type="submit" value="Send" className={styles.button} /> */}
             <button type="submit" value="Send" className={styles.button}>Submit</button>
             </form>

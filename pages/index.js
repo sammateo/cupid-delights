@@ -242,7 +242,11 @@ function Home() {
       <div className={styles.footer}>
         <div>
             <h3>Contact Information</h3>
-            <p>Call/Whatsapp +44 7432 577502</p>
+            <p>Call/Whatsapp</p>
+            {/* <span><a href="tel:+44 7432 577502">+44 7432 577502</a></span> */}
+            <span><a href="https://wa.me/447432577502">+44 7432 577502</a></span>
+            <p>Email</p>
+            <p><a href="mailto:cupidelights@gmail.com"> cupidelights@gmail.com</a></p>
             {/* <p>Whatsapp +44 7432 577502</p> */}
             <Link href="https://www.facebook.com/Cupid-Delights-103544264841798/?tn-str=k*F">
                 <a target="_blank">Facebook</a>
@@ -255,7 +259,7 @@ function Home() {
       </div>
 
 
-            <script src="https://www.paypal.com/sdk/js?client-id=AS8t-4KApnSdgE1-zg1Z5L-9OZBOUWPwsL-BZiMWFn_TxywrpykkO93H0uS5X9DXvfCvZHnpimmOPnAP&currency=GBP" data-sdk-integration-source="button-factory" async defer></script>
+            {/* <script src="https://www.paypal.com/sdk/js?client-id=AS8t-4KApnSdgE1-zg1Z5L-9OZBOUWPwsL-BZiMWFn_TxywrpykkO93H0uS5X9DXvfCvZHnpimmOPnAP&currency=GBP" data-sdk-integration-source="button-factory" async defer></script> */}
             {/* <script src="https://smtpjs.com/v3/smtp.js"> */}
 {/* </script> */}
     </div>
