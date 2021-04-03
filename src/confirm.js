@@ -1,6 +1,7 @@
 import styles from '../styles/confirm.module.css'
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
+import react from 'react';
 init("user_I8maVpumJJ5NPgSnOdsDM");
 
 export default function Confirm({option1,option2,price1,price2,total1,total2,total,name1,name2, quantity,shipping,nextDay}){
