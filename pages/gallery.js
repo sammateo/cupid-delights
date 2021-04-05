@@ -17,7 +17,7 @@ export default function Gallery(){
                     <div className={styles.logo} key={img}>
                     <Link href={img}>
                     {img.includes(".mp4")?
-                    <video width="300" height="300" autoPlay muted loop={true}>
+                    <video width="300" height="300" autoPlay muted webkit-playsInline playsInline loop={true}>
                     <source src={img} type="video/mp4"></source>
                   Your browser does not support the video tag.
                     </video>

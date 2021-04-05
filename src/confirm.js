@@ -2,7 +2,9 @@ import styles from '../styles/confirm.module.css'
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
 import react from 'react';
-init("user_I8maVpumJJ5NPgSnOdsDM");
+//init("user_I8maVpumJJ5NPgSnOdsDM");
+init("user_0452qsSu7KBjTA92mFxpX");
+
 
 export default function Confirm({option1,option2,price1,price2,total1,total2,total,name1,name2, quantity,shipping,nextDay}){
 
@@ -21,7 +23,7 @@ export default function Confirm({option1,option2,price1,price2,total1,total2,tot
     function sendEmail(e) {
         e.preventDefault();
     
-        emailjs.sendForm('service_ghaveav', 'template_2wf1e1f', e.target, 'user_I8maVpumJJ5NPgSnOdsDM')
+        emailjs.sendForm('service_hl0g155', 'template_o3jrnhw', e.target, 'user_0452qsSu7KBjTA92mFxpX')
           .then((result) => {
               console.log(result.text);
           }, (error) => {
@@ -43,15 +45,15 @@ export default function Confirm({option1,option2,price1,price2,total1,total2,tot
             additional = "none"
         }
         var contactParams = {
-            to_email: "sammateo4@gmail.com",
+            to_email: "cupidelights@gmail.com",
             to_name: e.target.querySelector("input[name = 'to_name']").value,
             address:e.target.querySelector("input[name = 'address']").value,
             country:e.target.querySelector("input[name = 'country']").value,
             contact_number:e.target.querySelector("input[name =contact_number]").value,
             addInfo:additional,
-            message: body
+            message: body + "Owner"
         }
-        emailjs.send('service_ghaveav', 'template_2wf1e1f', contactParams)
+        emailjs.send('service_hl0g155', 'template_o3jrnhw', contactParams)
         //.then(function (res) {})
     }
 
