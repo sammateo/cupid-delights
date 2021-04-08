@@ -4,11 +4,11 @@ import styles from '../styles/Home.module.css'
 import Cartfield from '../src/cartfield.js'
 import {useState} from 'react'
 import Link from 'next/link'
-import Paypal from '../src/paypal'
-import emailjs from 'emailjs-com';
+// import Paypal from '../src/paypal'
+// import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
 import Confirm from '../src/confirm'
-import next from 'next'
+// import next from 'next'
 init("user_I8maVpumJJ5NPgSnOdsDM");
 
 
@@ -120,7 +120,7 @@ function Home() {
         <title>Cupid Delights</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <link rel="icon" href="/logo.jpeg" />
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        {/* <script src="https://smtpjs.com/v3/smtp.js"></script> */}
 
       </Head>
 
@@ -228,8 +228,6 @@ function Home() {
       </div>
 
 
-
-
       <div className={styles.galleryButtonContainer}>
         <Link href="/gallery">
           <button>To Gallery</button>
@@ -251,6 +249,16 @@ function Home() {
             <Link href="https://www.facebook.com/Cupid-Delights-103544264841798/?tn-str=k*F">
                 <a target="_blank">Facebook</a>
             </Link>
+              <br></br>
+              <Link href="https://www.instagram.com/cupidelights/?hl=en">
+                <a target = "_blank">
+                  <img src="/ig.png"
+                  width={20}
+                  height={20}
+                  ></img>
+                </a>
+              </Link>
+
         </div>
         
         <p>Cupid Delights aims to satisfy your taste buds &amp; give you a taste of "home" with our delicious roti skins delivered straight to your door via our swift postal service.
