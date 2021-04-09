@@ -172,7 +172,12 @@ function Home() {
               />
         </div>
           <h2>Order Here</h2>
-          <p>Note: Minimum order is 5 roti skins</p>
+          
+          <ul>
+            <p>Note: </p>
+            <li>Minimum order is 5 roti skins</li>
+            <li>Shipping done on Tuesdays</li>
+          </ul>
           <div className={styles.options}> 
           <span>{formatter.format(price1)}</span><p>{name1}</p> <button name ="option1" value={option1} onClick={add} className="plusbutton"> + </button> <button name ="option1" onClick={minus} value={option1} className="minusbutton"> - </button>
             <br></br>
