@@ -60,7 +60,7 @@ export default function Confirm({option1,option2,price1,price2,total1,total2,tot
     return(
         <div>
             {/* onSubmit={sendEmail} */}
-            <form className={styles.form} onSubmit={(e)=> {sendEmail(e); sendEmailToOwner(e);}} >
+            <form className={styles.form} onSubmit={sendEmail} >
             <p>Shipping</p>
             <label>Name</label>
             <input type="text" name="to_name" required />
