@@ -224,7 +224,8 @@ function Home() {
 
             </div> */}
             {/* {((option1+option2)>5)?<button className={styles.orderButton}>Checkout</button>:null} */}
-            <button className={styles.orderButton} onClick={checkoutFunc}>Checkout</button>
+            <Link href="#form"><button className={styles.orderButton} onClick={checkoutFunc}>Checkout</button></Link>
+            {/* <button className={styles.orderButton} onClick={checkoutFunc}>Checkout</button> */}
             {(checkout && total !=0 && quantity>= 5 && quantity<=40)?<Confirm 
             option1 = {option1} price1={price1} total1={total1} total2={total2} total={total}
             option2 = {option2} price2={price2}  name1={name1} name2={name2} quantity={quantity}
