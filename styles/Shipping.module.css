@@ -37,6 +37,27 @@
 	font-size: 19px;
 }
 
+.nextDay {
+	/* border:2px solid black; */
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.nextDay p {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	transform: translateX(-10px);
+}
+
+.nextDay input {
+	/* width:40px; */
+	/* margin-left:10px; */
+	margin-right: 10px;
+}
+
 @media (max-width: 768px) {
 	.additionalInfo {
 		grid-template-columns: 1fr;

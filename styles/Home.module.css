@@ -148,8 +148,7 @@
 	color: black;
 }
 
-.nextDay {
-	/* border:2px solid black; */
+/* .nextDay {
 	text-align: center;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -164,34 +163,28 @@
 }
 
 .nextDay input {
-	/* width:40px; */
-	/* margin-left:10px; */
 	margin-right: 10px;
-}
+} */
 
 .orderButton {
 	margin-top: 40px;
 	padding: 10px;
-	/* background-color:rgb(0, 255, 221); */
 	background-color: black;
 	color: white;
 	font-weight: bold;
 	border: 2px solid black;
-	/* transition: 0.5s ease-in-out; */
 }
 .orderButton:active {
 	background-color: white;
 	color: black;
-	/* transition: 0.5s ease-in-out; */
 }
-.paypalbuttons {
+/* .paypalbuttons {
 	display: block;
 	width: 500px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	/* border:3px solid black; */
-}
+} */
 
 .galleryButtonContainer {
 	margin-top: 20px;

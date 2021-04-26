@@ -4,12 +4,12 @@ import styles from "../styles/Home.module.css";
 import Cartfield from "../src/cartfield.js";
 import { useState } from "react";
 import Link from "next/link";
-// import Paypal from '../src/paypal'
-// import emailjs from 'emailjs-com';
 import { init } from "emailjs-com";
 import Confirm from "../src/confirm";
 import ShippingInfo from "../src/ShippingInfo";
 import Options from "../src/Options";
+import Content from "../src/Content";
+import ShippingType from "../src/ShippingType";
 import Footer from "../src/Footer";
 init("user_I8maVpumJJ5NPgSnOdsDM");
 
@@ -41,43 +41,43 @@ function Home() {
 	const [nextDay, setNextDay] = useState(null);
 	const [quantity, setQuantity] = useState(0);
 
-	function add(event) {
-		setCheckout(false);
-		if (event.target.name == "option1") {
-			event.target.value++;
-			setOption1(event.target.value);
-			setTotal1(total1 + price1);
-			setTotal(total + price1);
-			setQuantity(quantity + 1);
-		}
+	// function add(event) {
+	// 	setCheckout(false);
+	// 	if (event.target.name == "option1") {
+	// 		event.target.value++;
+	// 		setOption1(event.target.value);
+	// 		setTotal1(total1 + price1);
+	// 		setTotal(total + price1);
+	// 		setQuantity(quantity + 1);
+	// 	}
 
-		if (event.target.name == "option2") {
-			event.target.value++;
-			setOption2(event.target.value);
-			setTotal2(total2 + price2);
-			setTotal(total + price2);
-			setQuantity(quantity + 1);
-		}
-	}
+	// 	if (event.target.name == "option2") {
+	// 		event.target.value++;
+	// 		setOption2(event.target.value);
+	// 		setTotal2(total2 + price2);
+	// 		setTotal(total + price2);
+	// 		setQuantity(quantity + 1);
+	// 	}
+	// }
 
-	function minus(event) {
-		setCheckout(false);
-		if (event.target.name == "option1" && option1 > 0) {
-			event.target.value--;
-			setOption1(event.target.value);
-			setTotal1(total1 - price1);
-			setTotal(total - price1);
-			setQuantity(quantity - 1);
-		}
+	// function minus(event) {
+	// 	setCheckout(false);
+	// 	if (event.target.name == "option1" && option1 > 0) {
+	// 		event.target.value--;
+	// 		setOption1(event.target.value);
+	// 		setTotal1(total1 - price1);
+	// 		setTotal(total - price1);
+	// 		setQuantity(quantity - 1);
+	// 	}
 
-		if (event.target.name == "option2" && option2 > 0) {
-			event.target.value--;
-			setOption2(event.target.value);
-			setTotal2(total2 - price2);
-			setTotal(total - price2);
-			setQuantity(quantity - 1);
-		}
-	}
+	// 	if (event.target.name == "option2" && option2 > 0) {
+	// 		event.target.value--;
+	// 		setOption2(event.target.value);
+	// 		setTotal2(total2 - price2);
+	// 		setTotal(total - price2);
+	// 		setQuantity(quantity - 1);
+	// 	}
+	// }
 
 	function checkoutFunc() {
 		if (quantity < 5) {
@@ -123,116 +123,46 @@ function Home() {
 				<h4>Made with love</h4>
 			</div>
 			<ShippingInfo></ShippingInfo>
-
-			<div className={styles.content}>
-				<div className={styles.logo}>
-					<img src="/logo.jpeg" alt="logo" width={90} height={90} />
-				</div>
-				<h2>Order Here</h2>
-
-				<p>Note: </p>
-				<p>Minimum order is 5 roti skins</p>
-				<p>Shipping done on Tuesdays</p>
-				<Options
-					checkout={checkout}
-					name1={name1}
-					name2={name2}
-					option1={option1}
-					option2={option2}
-					price1={price1}
-					price2={price2}
-					total={total}
-					total1={total1}
-					total2={total2}
-					shipping1={shipping1}
-					shipping2={shipping2}
-					shipping3={shipping3}
-					nextshipping1={nextshipping1}
-					nextshipping2={nextshipping2}
-					nextshipping3={nextshipping3}
-					shipping={shipping}
-					nextDay={nextDay}
-					quantity={quantity}
-					setCheckout={setCheckout}
-					setOption1={setOption1}
-					setOption2={setOption2}
-					setPrice1={setPrice1}
-					setPrice2={setPrice2}
-					setTotal={setTotal}
-					setTotal1={setTotal1}
-					setTotal2={setTotal2}
-					setShipping1={setShipping1}
-					setShipping2={setShipping2}
-					setShipping3={setShipping3}
-					setNextShipping1={setNextShipping1}
-					setNextShipping2={setNextShipping2}
-					setNextShipping3={setNextShipping3}
-					setShipping={setShipping}
-					setNextDay={setNextDay}
-					setQuantity={setQuantity}
-				></Options>
-
-				<div className={styles.nextDay}>
-					<label htmlFor="nextDay">Shipping Type</label>
-					<p>
-						<input
-							type="radio"
-							id="standard"
-							name="nextDay"
-							onChange={changeShipType}
-						></input>
-						<span>Express</span>
-					</p>
-					<p>
-						<input
-							type="radio"
-							id="nextDay"
-							name="nextDay"
-							onChange={changeShipType}
-						></input>
-						<span>Guaranteed Next Day</span>
-					</p>
-				</div>
-
-				<div className={styles.cart}>
-					{total == 0 ? <h2>Cart Empty</h2> : <h2>Cart</h2>}
-					<Cartfield
-						option1={option1}
-						price1={price1}
-						option2={option2}
-						price2={price2}
-						total1={total1}
-						total2={total2}
-						total={total}
-						name1={name1}
-						name2={name2}
-						quantity={quantity}
-						nextDay={nextDay}
-					/>
-				</div>
-
-				<Link href="#form">
-					<button className={styles.orderButton} onClick={checkoutFunc}>
-						Checkout
-					</button>
-				</Link>
-				{checkout && total != 0 && quantity >= 5 && quantity <= 40 ? (
-					<Confirm
-						option1={option1}
-						price1={price1}
-						total1={total1}
-						total2={total2}
-						total={total}
-						option2={option2}
-						price2={price2}
-						name1={name1}
-						name2={name2}
-						quantity={quantity}
-						shipping={shipping}
-						nextDay={nextDay}
-					/>
-				) : null}
-			</div>
+			<Content
+				checkout={checkout}
+				name1={name1}
+				name2={name2}
+				option1={option1}
+				option2={option2}
+				price1={price1}
+				price2={price2}
+				total={total}
+				total1={total1}
+				total2={total2}
+				shipping1={shipping1}
+				shipping2={shipping2}
+				shipping3={shipping3}
+				nextshipping1={nextshipping1}
+				nextshipping2={nextshipping2}
+				nextshipping3={nextshipping3}
+				shipping={shipping}
+				nextDay={nextDay}
+				quantity={quantity}
+				setCheckout={setCheckout}
+				setOption1={setOption1}
+				setOption2={setOption2}
+				setPrice1={setPrice1}
+				setPrice2={setPrice2}
+				setTotal={setTotal}
+				setTotal1={setTotal1}
+				setTotal2={setTotal2}
+				setShipping1={setShipping1}
+				setShipping2={setShipping2}
+				setShipping3={setShipping3}
+				setNextShipping1={setNextShipping1}
+				setNextShipping2={setNextShipping2}
+				setNextShipping3={setNextShipping3}
+				setShipping={setShipping}
+				setNextDay={setNextDay}
+				setQuantity={setQuantity}
+				changeShipType={changeShipType}
+				checkoutFunc={checkoutFunc}
+			></Content>
 
 			<div className={styles.galleryButtonContainer}>
 				<Link href="/gallery">
