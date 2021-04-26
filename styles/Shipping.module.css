@@ -1,0 +1,45 @@
+.additionalInfo {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+}
+.shippingInfo {
+	display: grid;
+	text-align: center;
+	margin-top: 20px;
+	padding: 10px;
+	color: white;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 30px;
+	display: absolute;
+	background-color: rgba(0, 0, 0, 1);
+	box-shadow: 10px 10px 10px black;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 50px 50px 50px 50px;
+}
+
+.shippingInfo h2 {
+	padding: 0;
+	display: block;
+	grid-column: 1/-1;
+	margin-bottom: 10px;
+	border-bottom: 2px solid white;
+}
+
+.shippingInfo p.larger {
+	border-top: 2px solid white;
+	grid-column: 1/-1;
+}
+
+.guaranteed h2 {
+	font-size: 19px;
+}
+
+@media (max-width: 768px) {
+	.additionalInfo {
+		grid-template-columns: 1fr;
+		grid-template-rows: 300px;
+	}
+}

@@ -8,12 +8,13 @@ import Link from "next/link";
 // import emailjs from 'emailjs-com';
 import { init } from "emailjs-com";
 import Confirm from "../src/confirm";
-// import next from 'next'
+import ShippingInfo from "../src/ShippingInfo";
+import Options from "../src/Options";
+import Footer from "../src/Footer";
 init("user_I8maVpumJJ5NPgSnOdsDM");
 
 function Home() {
 	const [checkout, setCheckout] = useState(false);
-	// let option1 =0;
 	var formatter = new Intl.NumberFormat("en-IN", {
 		style: "currency",
 		currency: "GBP",
@@ -121,31 +122,7 @@ function Home() {
 				<h1>Cupid Delights</h1>
 				<h4>Made with love</h4>
 			</div>
-
-			<div className={styles.additionalInfo}>
-				<div className={styles.shippingInfo}>
-					<h2>Standard Shipping</h2>
-					<p>5-12 rotis </p>
-					<p>{formatter.format(shipping1)}</p>
-					<p>13-19 rotis</p>
-					<p>{formatter.format(shipping2)}</p>
-					<p>20-40 rotis</p>
-					<p>{formatter.format(shipping3)}</p>
-					<p className={styles.larger}>Contact us for larger orders</p>
-				</div>
-
-				<div className={styles.shippingInfo}>
-					<h2>Next Day Shipping</h2>
-					<p>5-12 rotis </p>
-					<p>{formatter.format(nextshipping1)}</p>
-					<p>13-19 rotis</p>
-					<p>{formatter.format(nextshipping2)}</p>
-					<p>20-40 rotis</p>
-					<p>{formatter.format(nextshipping3)}</p>
-					<p className={styles.larger}>Contact us for larger orders</p>
-					<p className={styles.larger}>Guaranteed 12 noon next day</p>
-				</div>
-			</div>
+			<ShippingInfo></ShippingInfo>
 
 			<div className={styles.content}>
 				<div className={styles.logo}>
@@ -153,60 +130,49 @@ function Home() {
 				</div>
 				<h2>Order Here</h2>
 
-				{/* <ul> */}
 				<p>Note: </p>
 				<p>Minimum order is 5 roti skins</p>
 				<p>Shipping done on Tuesdays</p>
-				{/* </ul> */}
-				<div className={styles.options}>
-					<span>{formatter.format(price1)}</span>
-					<p>{name1}</p>{" "}
-					<button
-						name="option1"
-						value={option1}
-						onClick={add}
-						className="plusbutton"
-					>
-						{" "}
-						+{" "}
-					</button>{" "}
-					<button
-						name="option1"
-						onClick={minus}
-						value={option1}
-						className="minusbutton"
-					>
-						{" "}
-						-{" "}
-					</button>
-					<br></br>
-					{/* </div>
-          <div className={styles.options}> */}
-					<span>{formatter.format(price2)}</span>
-					<p>{name2}</p>{" "}
-					<button
-						value={option2}
-						name="option2"
-						onClick={add}
-						className="plusbutton"
-					>
-						{" "}
-						+{" "}
-					</button>{" "}
-					<button
-						name="option2"
-						onClick={minus}
-						value={option2}
-						className="minusbutton"
-					>
-						{" "}
-						-{" "}
-					</button>
-				</div>
-				{/* <p>{quantity}</p> */}
+				<Options
+					checkout={checkout}
+					name1={name1}
+					name2={name2}
+					option1={option1}
+					option2={option2}
+					price1={price1}
+					price2={price2}
+					total={total}
+					total1={total1}
+					total2={total2}
+					shipping1={shipping1}
+					shipping2={shipping2}
+					shipping3={shipping3}
+					nextshipping1={nextshipping1}
+					nextshipping2={nextshipping2}
+					nextshipping3={nextshipping3}
+					shipping={shipping}
+					nextDay={nextDay}
+					quantity={quantity}
+					setCheckout={setCheckout}
+					setOption1={setOption1}
+					setOption2={setOption2}
+					setPrice1={setPrice1}
+					setPrice2={setPrice2}
+					setTotal={setTotal}
+					setTotal1={setTotal1}
+					setTotal2={setTotal2}
+					setShipping1={setShipping1}
+					setShipping2={setShipping2}
+					setShipping3={setShipping3}
+					setNextShipping1={setNextShipping1}
+					setNextShipping2={setNextShipping2}
+					setNextShipping3={setNextShipping3}
+					setShipping={setShipping}
+					setNextDay={setNextDay}
+					setQuantity={setQuantity}
+				></Options>
 
 				<div className={styles.nextDay}>
-					{/* <p>{nextDay?"Nextday":"standard"}</p> */}
 					<label htmlFor="nextDay">Shipping Type</label>
 					<p>
 						<input
@@ -215,7 +181,7 @@ function Home() {
 							name="nextDay"
 							onChange={changeShipType}
 						></input>
-						<span>Standard</span>
+						<span>Express</span>
 					</p>
 					<p>
 						<input
@@ -224,7 +190,7 @@ function Home() {
 							name="nextDay"
 							onChange={changeShipType}
 						></input>
-						<span>Next Day</span>
+						<span>Guaranteed Next Day</span>
 					</p>
 				</div>
 
@@ -245,29 +211,11 @@ function Home() {
 					/>
 				</div>
 
-				{/* <div className={styles.paypalbuttons}>
-                {
-                    (total>0 && checkout)? <Paypal bill={total} option1 = {option1} price1={price1}
-                    option2 = {option2} price2={price2} name1={name1} name2={name2}/> :
-                    <div>
-                        <button className={styles.orderButton}
-                        
-                        onClick={()=>{
-                            setCheckout(true)
-                        }}
-                        
-                        >Checkout</button>
-                    </div>
-                }
-
-            </div> */}
-				{/* {((option1+option2)>5)?<button className={styles.orderButton}>Checkout</button>:null} */}
 				<Link href="#form">
 					<button className={styles.orderButton} onClick={checkoutFunc}>
 						Checkout
 					</button>
 				</Link>
-				{/* <button className={styles.orderButton} onClick={checkoutFunc}>Checkout</button> */}
 				{checkout && total != 0 && quantity >= 5 && quantity <= 40 ? (
 					<Confirm
 						option1={option1}
@@ -292,43 +240,9 @@ function Home() {
 				</Link>
 			</div>
 
-			<div className={styles.footer}>
-				<div>
-					<h3>Contact Information</h3>
-					<p>Call/Whatsapp</p>
-					{/* <span><a href="tel:+44 7432 577502">+44 7432 577502</a></span> */}
-					<span>
-						<a href="https://wa.me/447432577502">+44 7432 577502</a>
-					</span>
-					<p>Email</p>
-					<p>
-						<a href="mailto:cupidelights@gmail.com"> cupidelights@gmail.com</a>
-					</p>
-					{/* <p>Whatsapp +44 7432 577502</p> */}
-					<Link href="https://www.facebook.com/Cupid-Delights-103544264841798/?tn-str=k*F">
-						<a target="_blank">Facebook</a>
-					</Link>
-					<br></br>
-					<Link href="https://www.instagram.com/cupidelights/?hl=en">
-						<a target="_blank">
-							<img src="/ig.png" width={20} height={20}></img>
-						</a>
-					</Link>
-				</div>
-
-				<p>
-					Cupid Delights aims to satisfy your taste buds &amp; give you a taste
-					of "home" with our delicious roti skins delivered straight to your
-					door via our swift postal service.
-				</p>
-			</div>
-
-			{/* <script src="https://www.paypal.com/sdk/js?client-id=AS8t-4KApnSdgE1-zg1Z5L-9OZBOUWPwsL-BZiMWFn_TxywrpykkO93H0uS5X9DXvfCvZHnpimmOPnAP&currency=GBP" data-sdk-integration-source="button-factory" async defer></script> */}
-			{/* <script src="https://smtpjs.com/v3/smtp.js"> */}
-			{/* </script> */}
+			<Footer></Footer>
 		</div>
 	);
 }
 
 export default Home;
-// export {option1};
