@@ -1,15 +1,10 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-//import Image from 'next/image'
-import Cartfield from "../src/cartfield.js";
 import { useState } from "react";
 import Link from "next/link";
 import { init } from "emailjs-com";
-import Confirm from "../src/confirm";
 import ShippingInfo from "../src/ShippingInfo";
-import Options from "../src/Options";
 import Content from "../src/Content";
-import ShippingType from "../src/ShippingType";
 import Footer from "../src/Footer";
 init("user_I8maVpumJJ5NPgSnOdsDM");
 

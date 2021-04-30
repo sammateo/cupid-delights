@@ -84,6 +84,8 @@ export default function Confirm({
 				<input type="email" name="to_email" required />
 				<label>Address</label>
 				<input type="text" name="address" required />
+				<label>Postal Code</label>
+				<input type="text" name="postal" required />
 				<label>Country</label>
 				<input type="text" name="country" required />
 				<label>Order</label>
