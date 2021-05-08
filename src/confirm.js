@@ -54,7 +54,7 @@ export default function Confirm({
 
 	function sendEmail(e) {
 		e.preventDefault();
-		alert("A confirmation email will be sent");
+		alert("A confirmation email will be sent with payment details");
 		emailjs
 			.sendForm(
 				"service_hl0g155",
