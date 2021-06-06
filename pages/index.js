@@ -6,6 +6,9 @@ import { init } from "emailjs-com";
 import ShippingInfo from "../src/ShippingInfo";
 import Content from "../src/Content";
 import Footer from "../src/Footer";
+
+import Navbar from "../src/Update/Navbar";
+import ShippingTile from "../src/Update/ShippingTile";
 init("user_I8maVpumJJ5NPgSnOdsDM");
 
 function Home() {
@@ -113,11 +116,16 @@ function Home() {
 				{/* <script src="https://smtpjs.com/v3/smtp.js"></script> */}
 			</Head>
 
-			<div className={styles.title}>
+			{/* <div className={styles.title}>
 				<h1>Cupid Delights</h1>
 				<h4>Made with love</h4>
+			</div> */}
+			<Navbar></Navbar>
+			{/* <ShippingInfo></ShippingInfo> */}
+			<div>
+				<ShippingTile></ShippingTile>
+				<ShippingTile></ShippingTile>
 			</div>
-			<ShippingInfo></ShippingInfo>
 			<Content
 				checkout={checkout}
 				name1={name1}
