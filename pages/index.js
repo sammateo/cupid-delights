@@ -124,7 +124,6 @@ function Home() {
 			{/* <ShippingInfo></ShippingInfo> */}
 			<div>
 				<ShippingTile></ShippingTile>
-				<ShippingTile></ShippingTile>
 			</div>
 			<Content
 				checkout={checkout}

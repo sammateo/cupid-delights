@@ -1,8 +1,9 @@
 .container {
-	width: 300px;
-	border: 1px solid black;
+	width: 100%;
+	/* border: 1px solid black; */
 	padding: 10px;
-	border-radius: 10px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .shippingInfo h2 {
@@ -10,6 +11,8 @@
 	grid-column: 1/-1;
 }
 .shippingInfo {
+	border: 1px solid black;
+	border-radius: 10px;
 	display: grid;
 	text-align: center;
 	margin-top: 20px;
@@ -21,4 +24,14 @@
 	display: absolute;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 50px 50px 50px 50px;
+}
+
+.larger {
+	grid-column: 1/-1;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		grid-template-columns: 1fr;
+	}
 }

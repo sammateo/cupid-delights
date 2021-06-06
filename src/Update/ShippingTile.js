@@ -26,6 +26,16 @@ export default function ShippingTile() {
 				<p>{formatter.format(shipping3)}</p>
 				<p className={styles.larger}>Contact us for larger orders</p>
 			</div>
+			<div className={styles.shippingInfo + " " + styles.guaranteed}>
+				<h2> Guaranteed Next Day Shipping</h2>
+				<p>5-12 rotis </p>
+				<p>{formatter.format(nextshipping1)}</p>
+				<p>13-19 rotis</p>
+				<p>{formatter.format(nextshipping2)}</p>
+				<p>20-40 rotis</p>
+				<p>{formatter.format(nextshipping3)}</p>
+				<p className={styles.larger}>Guaranteed 12 noon next day</p>
+			</div>
 		</div>
 	);
 }

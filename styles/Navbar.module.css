@@ -20,3 +20,8 @@
 	font-size: 20px;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+.container .navitem:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
