@@ -117,6 +117,10 @@ function Home() {
 				<h1>Cupid Delights</h1>
 				<h4>Made with love</h4>
 			</div>
+
+			<div className={styles.banner}>
+					<h2>We regret to inform you that we will closed for the Summer Holidays during the period: 31st July until 11th September 2021.</h2>
+			</div>
 			<ShippingInfo></ShippingInfo>
 			<Content
 				checkout={checkout}
