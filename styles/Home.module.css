@@ -36,6 +36,7 @@
 .banner {
 	width: 100%;
 	margin-left: auto;
+	padding: 10px;
 	margin-right: auto;
 	background-color: white;
 	text-align: center;
