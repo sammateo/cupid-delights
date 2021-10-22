@@ -6,7 +6,7 @@
 	width: 100%;
 	overflow: visible;
 	display: grid;
-	/* grid-template-rows: 120px 100px 300px auto 70px 250px; */
+	grid-template-rows: 120px 300px auto 70px 250px;
 	grid-auto-flow: dense;
 }
 
@@ -31,16 +31,6 @@
 .title h4 {
 	word-spacing: 10px;
 	color: red;
-}
-
-.banner {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: white;
-	text-align: center;
-	display: grid;
-	place-items: center;
 }
 
 .content {
@@ -232,7 +222,7 @@
 @media (max-width: 768px) {
 	.container {
 		width: 100%;
-		grid-template-rows: 120px 180px 600px auto 70px 250px;
+		grid-template-rows: 120px 600px auto 70px 250px;
 	}
 
 	.options p {
