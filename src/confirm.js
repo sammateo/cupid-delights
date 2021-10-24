@@ -24,6 +24,7 @@ export default function Confirm({
 		currency: "GBP",
 	});
 
+	let discount = total * 0.9;
 	let body =
 		"Order: " +
 		option1 +
@@ -43,6 +44,9 @@ export default function Confirm({
 		"Cost: " +
 		formatter.format(total) +
 		" |\n" +
+		"Vincy 10% Discounted Cost: " +
+		formatter.format(discount) +
+		" |\n" +
 		"Quantity: " +
 		quantity +
 		" |\n" +
@@ -50,7 +54,7 @@ export default function Confirm({
 		formatter.format(shipping) +
 		" |\n" +
 		"Total: " +
-		formatter.format(Number(total + shipping));
+		formatter.format(Number(discount + shipping));
 
 	function sendEmail(e) {
 		e.preventDefault();
