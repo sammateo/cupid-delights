@@ -9,13 +9,17 @@ export default function Content({
 	checkout,
 	name1,
 	name2,
+	name3,
 	option1,
 	option2,
+	option3,
 	price1,
 	price2,
+	price3,
 	total,
 	total1,
 	total2,
+	total3,
 	shipping1,
 	shipping2,
 	shipping3,
@@ -28,11 +32,14 @@ export default function Content({
 	setCheckout,
 	setOption1,
 	setOption2,
+	setOption3,
 	setPrice1,
 	setPrice2,
+	setPrice3,
 	setTotal,
 	setTotal1,
 	setTotal2,
+	setTotal3,
 	setShipping1,
 	setShipping2,
 	setShipping3,
@@ -52,20 +59,27 @@ export default function Content({
 			</div>
 			<h2>Order Here</h2>
 
-			<p>Note: </p>
-			<p>Minimum order is 5 roti skins</p>
-			<p>Shipping done on Tuesdays</p>
+			<p style={{ color: "red" }} className={styles.note}>
+				Note:{" "}
+			</p>
+			<p className={styles.note}>Minimum order is 5 roti skins</p>
+			<p className={styles.note}>Shipping done on Tuesdays</p>
+			<p className={styles.note}>Buss Up Shot Contains diary products</p>
 			<Options
 				checkout={checkout}
 				name1={name1}
 				name2={name2}
+				name3={name3}
 				option1={option1}
 				option2={option2}
+				option3={option3}
 				price1={price1}
 				price2={price2}
+				price3={price3}
 				total={total}
 				total1={total1}
 				total2={total2}
+				total3={total3}
 				shipping1={shipping1}
 				shipping2={shipping2}
 				shipping3={shipping3}
@@ -78,11 +92,14 @@ export default function Content({
 				setCheckout={setCheckout}
 				setOption1={setOption1}
 				setOption2={setOption2}
+				setOption3={setOption3}
 				setPrice1={setPrice1}
 				setPrice2={setPrice2}
+				setPrice3={setPrice3}
 				setTotal={setTotal}
 				setTotal1={setTotal1}
 				setTotal2={setTotal2}
+				setTotal3={setTotal3}
 				setShipping1={setShipping1}
 				setShipping2={setShipping2}
 				setShipping3={setShipping3}
@@ -101,11 +118,15 @@ export default function Content({
 					price1={price1}
 					option2={option2}
 					price2={price2}
+					option3={option3}
+					price3={price3}
 					total1={total1}
 					total2={total2}
+					total3={total3}
 					total={total}
 					name1={name1}
 					name2={name2}
+					name3={name3}
 					quantity={quantity}
 					nextDay={nextDay}
 				/>
@@ -122,11 +143,15 @@ export default function Content({
 					price1={price1}
 					total1={total1}
 					total2={total2}
+					total3={total3}
 					total={total}
 					option2={option2}
 					price2={price2}
+					option3={option3}
+					price3={price3}
 					name1={name1}
 					name2={name2}
+					name3={name3}
 					quantity={quantity}
 					shipping={shipping}
 					nextDay={nextDay}
