@@ -3,11 +3,14 @@ import { useState, usEffect } from "react";
 export default function Cartfield({
 	option1,
 	option2,
+	option3,
 	total1,
 	total2,
+	total3,
 	total,
 	name1,
 	name2,
+	name3,
 	quantity,
 	nextDay,
 }) {
@@ -44,12 +47,20 @@ export default function Cartfield({
 					<p>Price: {formatter.format(total2)}</p>
 				</div>
 			)}
+			{option3 == 0 || option3 == null ? null : (
+				<div className={styles.cartoption}>
+					<p>{name3}</p>
+					<p>Quantity: {option3}</p>
+					<p>Price: {formatter.format(total3)}</p>
+				</div>
+			)}
 
 			{(option1 == 0 || option1 == null) &&
-			(option2 == 0 || option2 == null) ? null : (
+			(option2 == 0 || option2 == null) &&
+			(option3 == 0 || option3 == null) ? null : (
 				<div className={styles.total}>
 					<p>Cost: {formatter.format(total)}</p>
-					<p>Quantity: {Number(option1) + Number(option2)}</p>
+					<p>Quantity: {quantity}</p>
 					<p>
 						Shipping:{" "}
 						{quantity >= 5 && quantity <= 12 && !nextDay

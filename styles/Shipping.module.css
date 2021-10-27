@@ -42,6 +42,7 @@
 	text-align: center;
 	display: grid;
 	grid-template-columns: 1fr;
+	line-height: normal;
 }
 
 .nextDay p {

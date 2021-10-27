@@ -4,13 +4,17 @@ export default function Options({
 	checkout,
 	name1,
 	name2,
+	name3,
 	option1,
 	option2,
+	option3,
 	price1,
 	price2,
+	price3,
 	total,
 	total1,
 	total2,
+	total3,
 	shipping1,
 	shipping2,
 	shipping3,
@@ -23,11 +27,14 @@ export default function Options({
 	setCheckout,
 	setOption1,
 	setOption2,
+	setOption3,
 	setPrice1,
 	setPrice2,
+	setPrice3,
 	setTotal,
 	setTotal1,
 	setTotal2,
+	setTotal3,
 	setShipping1,
 	setShipping2,
 	setShipping3,
@@ -62,6 +69,13 @@ export default function Options({
 			setTotal(total + price2);
 			setQuantity(quantity + 1);
 		}
+		if (event.target.name == "option3") {
+			event.target.value++;
+			setOption3(event.target.value);
+			setTotal3(total3 + price3);
+			setTotal(total + price3);
+			setQuantity(quantity + 1);
+		}
 	}
 
 	function minus(event) {
@@ -79,6 +93,13 @@ export default function Options({
 			setOption2(event.target.value);
 			setTotal2(total2 - price2);
 			setTotal(total - price2);
+			setQuantity(quantity - 1);
+		}
+		if (event.target.name == "option3" && option3 > 0) {
+			event.target.value--;
+			setOption3(event.target.value);
+			setTotal3(total3 - price3);
+			setTotal(total - price3);
 			setQuantity(quantity - 1);
 		}
 	}
@@ -151,6 +172,28 @@ export default function Options({
 				name="option2"
 				onClick={minus}
 				value={option2}
+				className="minusbutton"
+			>
+				{" "}
+				-{" "}
+			</button>
+			{/* Buss Up Shot */}
+			<br></br>
+			<span>{formatter.format(price3)}</span>
+			<p>{name3}</p>{" "}
+			<button
+				value={option3}
+				name="option3"
+				onClick={add}
+				className="plusbutton"
+			>
+				{" "}
+				+{" "}
+			</button>{" "}
+			<button
+				name="option3"
+				onClick={minus}
+				value={option3}
 				className="minusbutton"
 			>
 				{" "}

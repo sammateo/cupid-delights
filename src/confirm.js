@@ -8,13 +8,17 @@ init("user_0452qsSu7KBjTA92mFxpX");
 export default function Confirm({
 	option1,
 	option2,
+	option3,
 	price1,
 	price2,
+	price3,
 	total1,
 	total2,
+	total3,
 	total,
 	name1,
 	name2,
+	name3,
 	quantity,
 	shipping,
 	nextDay,
@@ -24,8 +28,9 @@ export default function Confirm({
 		currency: "GBP",
 	});
 
+	// let discount = total * 0.9;
 	let body =
-		"Order: " +
+		"Order: \n" +
 		option1 +
 		" of " +
 		name1 +
@@ -40,8 +45,18 @@ export default function Confirm({
 		" @ " +
 		formatter.format(price2) +
 		" |\n" +
+		option3 +
+		" of " +
+		name3 +
+		"(s)" +
+		" @ " +
+		formatter.format(price3) +
+		" |\n" +
 		"Cost: " +
 		formatter.format(total) +
+		// " |\n" +
+		// "Vincentian 10% Discounted Cost: " +
+		// formatter.format(discount) +
 		" |\n" +
 		"Quantity: " +
 		quantity +
