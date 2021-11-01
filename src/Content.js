@@ -64,7 +64,7 @@ export default function Content({
 			</p>
 			<p className={styles.note}>Minimum order is 5 roti skins</p>
 			<p className={styles.note}>Shipping done on Tuesdays</p>
-			<p className={styles.note}>Buss Up Shot Contains diary products</p>
+			<p className={styles.note}>Buss Up Shot Contains dairy products</p>
 			<Options
 				checkout={checkout}
 				name1={name1}
