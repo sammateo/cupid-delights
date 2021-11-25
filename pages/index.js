@@ -137,7 +137,7 @@ function Home() {
 				<h1>Cupid Delights</h1>
 				<h4>Made with love</h4>
 			</div>
-			<h3 className={styles.banner}>Buy Any 10 Roti Skins get 2 FREE</h3>
+			<h3 className={styles.banner}>Buy Any 10 Roti Skins Get 2 FREE</h3>
 
 			<ShippingInfo></ShippingInfo>
 			<Content
