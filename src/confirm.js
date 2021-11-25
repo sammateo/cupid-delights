@@ -9,16 +9,28 @@ export default function Confirm({
 	option1,
 	option2,
 	option3,
+	option4,
+	option5,
+	option6,
 	price1,
 	price2,
 	price3,
+	price4,
+	price5,
+	price6,
 	total1,
 	total2,
 	total3,
+	total4,
+	total5,
+	total6,
 	total,
 	name1,
 	name2,
 	name3,
+	name4,
+	name5,
+	name6,
 	quantity,
 	shipping,
 	nextDay,
@@ -51,6 +63,27 @@ export default function Confirm({
 		"(s)" +
 		" @ " +
 		formatter.format(price3) +
+		" |\n" +
+		option4 +
+		" of " +
+		name4 +
+		"(s)" +
+		" @ " +
+		formatter.format(price4) +
+		" |\n" +
+		option5 +
+		" of " +
+		name5 +
+		"(s)" +
+		" @ " +
+		formatter.format(price5) +
+		" |\n" +
+		option6 +
+		" of " +
+		name6 +
+		"(s)" +
+		" @ " +
+		formatter.format(price6) +
 		" |\n" +
 		"Cost: " +
 		formatter.format(total) +

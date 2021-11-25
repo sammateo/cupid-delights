@@ -33,6 +33,14 @@
 	color: red;
 }
 
+.banner {
+	position: absolute;
+	background-color: white;
+	top: 120px;
+	width: 100%;
+	text-align: center;
+}
+
 .content {
 	display: block;
 	width: 600px;

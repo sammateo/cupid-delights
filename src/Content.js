@@ -10,22 +10,34 @@ export default function Content({
 	name1,
 	name2,
 	name3,
+	name4,
+	name5,
+	name6,
 	option1,
 	option2,
 	option3,
+	option4,
+	option5,
+	option6,
 	price1,
 	price2,
 	price3,
+	price4,
+	price5,
+	price6,
 	total,
 	total1,
 	total2,
 	total3,
-	shipping1,
-	shipping2,
-	shipping3,
-	nextshipping1,
-	nextshipping2,
-	nextshipping3,
+	total4,
+	total5,
+	total6,
+	// shipping1,
+	// shipping2,
+	// shipping3,
+	// nextshipping1,
+	// nextshipping2,
+	// nextshipping3,
 	shipping,
 	nextDay,
 	quantity,
@@ -33,21 +45,27 @@ export default function Content({
 	setOption1,
 	setOption2,
 	setOption3,
-	setPrice1,
-	setPrice2,
-	setPrice3,
+	setOption4,
+	setOption5,
+	setOption6,
+	// setPrice1,
+	// setPrice2,
+	// setPrice3,
 	setTotal,
 	setTotal1,
 	setTotal2,
 	setTotal3,
-	setShipping1,
-	setShipping2,
-	setShipping3,
-	setNextShipping1,
-	setNextShipping2,
-	setNextShipping3,
-	setShipping,
-	setNextDay,
+	setTotal4,
+	setTotal5,
+	setTotal6,
+	// setShipping1,
+	// setShipping2,
+	// setShipping3,
+	// setNextShipping1,
+	// setNextShipping2,
+	// setNextShipping3,
+	// setShipping,
+	// setNextDay,
 	setQuantity,
 	changeShipType,
 	checkoutFunc,
@@ -66,48 +84,66 @@ export default function Content({
 			<p className={styles.note}>Shipping done on Tuesdays</p>
 			<p className={styles.note}>Buss Up Shot Contains dairy products</p>
 			<Options
-				checkout={checkout}
+				// checkout={checkout}
 				name1={name1}
 				name2={name2}
 				name3={name3}
+				name4={name4}
+				name5={name5}
+				name6={name6}
 				option1={option1}
 				option2={option2}
 				option3={option3}
+				option4={option4}
+				option5={option5}
+				option6={option6}
 				price1={price1}
 				price2={price2}
 				price3={price3}
+				price4={price4}
+				price5={price5}
+				price6={price6}
 				total={total}
 				total1={total1}
 				total2={total2}
 				total3={total3}
-				shipping1={shipping1}
-				shipping2={shipping2}
-				shipping3={shipping3}
-				nextshipping1={nextshipping1}
-				nextshipping2={nextshipping2}
-				nextshipping3={nextshipping3}
-				shipping={shipping}
-				nextDay={nextDay}
+				total4={total4}
+				total5={total5}
+				total6={total6}
+				// shipping1={shipping1}
+				// shipping2={shipping2}
+				// shipping3={shipping3}
+				// nextshipping1={nextshipping1}
+				// nextshipping2={nextshipping2}
+				// nextshipping3={nextshipping3}
+				// shipping={shipping}
+				// nextDay={nextDay}
 				quantity={quantity}
 				setCheckout={setCheckout}
 				setOption1={setOption1}
 				setOption2={setOption2}
 				setOption3={setOption3}
-				setPrice1={setPrice1}
-				setPrice2={setPrice2}
-				setPrice3={setPrice3}
+				setOption4={setOption4}
+				setOption5={setOption5}
+				setOption6={setOption6}
+				// setPrice1={setPrice1}
+				// setPrice2={setPrice2}
+				// setPrice3={setPrice3}
 				setTotal={setTotal}
 				setTotal1={setTotal1}
 				setTotal2={setTotal2}
 				setTotal3={setTotal3}
-				setShipping1={setShipping1}
-				setShipping2={setShipping2}
-				setShipping3={setShipping3}
-				setNextShipping1={setNextShipping1}
-				setNextShipping2={setNextShipping2}
-				setNextShipping3={setNextShipping3}
-				setShipping={setShipping}
-				setNextDay={setNextDay}
+				setTotal4={setTotal4}
+				setTotal5={setTotal5}
+				setTotal6={setTotal6}
+				// setShipping1={setShipping1}
+				// setShipping2={setShipping2}
+				// setShipping3={setShipping3}
+				// setNextShipping1={setNextShipping1}
+				// setNextShipping2={setNextShipping2}
+				// setNextShipping3={setNextShipping3}
+				// setShipping={setShipping}
+				// setNextDay={setNextDay}
 				setQuantity={setQuantity}
 			></Options>
 			<ShippingType changeShipType={changeShipType}></ShippingType>
@@ -120,13 +156,25 @@ export default function Content({
 					price2={price2}
 					option3={option3}
 					price3={price3}
+					option4={option4}
+					price4={price4}
+					option5={option5}
+					price5={price5}
+					option6={option6}
+					price6={price6}
 					total1={total1}
 					total2={total2}
 					total3={total3}
+					total4={total4}
+					total5={total5}
+					total6={total6}
 					total={total}
 					name1={name1}
 					name2={name2}
 					name3={name3}
+					name4={name4}
+					name5={name5}
+					name6={name6}
 					quantity={quantity}
 					nextDay={nextDay}
 				/>
@@ -140,18 +188,30 @@ export default function Content({
 			{checkout && total != 0 && quantity >= 5 && quantity <= 40 ? (
 				<Confirm
 					option1={option1}
+					option2={option2}
+					option3={option3}
+					option4={option4}
+					option5={option5}
+					option6={option6}
 					price1={price1}
+					price2={price2}
+					price3={price3}
+					price4={price4}
+					price5={price5}
+					price6={price6}
 					total1={total1}
 					total2={total2}
 					total3={total3}
+					total4={total4}
+					total5={total5}
+					total6={total6}
 					total={total}
-					option2={option2}
-					price2={price2}
-					option3={option3}
-					price3={price3}
 					name1={name1}
 					name2={name2}
 					name3={name3}
+					name4={name4}
+					name5={name5}
+					name6={name6}
 					quantity={quantity}
 					shipping={shipping}
 					nextDay={nextDay}

@@ -16,17 +16,33 @@ function Home() {
 	});
 	const name1 = "Plain Roti Skin";
 	const name2 = "Dhal Puri Roti Skin";
-	const name3 = "Buss Up Shot";
+	const name3 = "Buss Up Shot Roti Skin";
+	const name4 = "Mini Plain Roti Skin";
+	const name5 = "Mini Dhal Puri Roti Skin";
+	const name6 = "Mini Buss Up Shot Roti Skin";
+
 	const [option1, setOption1] = useState(0); //quantity of option1
 	const [option2, setOption2] = useState(0); //quantity of option2
 	const [option3, setOption3] = useState(0); //quantity of option3
+	const [option4, setOption4] = useState(0);
+	const [option5, setOption5] = useState(0);
+	const [option6, setOption6] = useState(0);
+
 	const [price1, setPrice1] = useState(2); //price in Pound
 	const [price2, setPrice2] = useState(3);
 	const [price3, setPrice3] = useState(3);
+	const [price4, setPrice4] = useState(1.5);
+	const [price5, setPrice5] = useState(2.5);
+	const [price6, setPrice6] = useState(2.5);
+
 	const [total, setTotal] = useState(0);
 	const [total1, setTotal1] = useState(0); //total of each option
 	const [total2, setTotal2] = useState(0);
 	const [total3, setTotal3] = useState(0);
+	const [total4, setTotal4] = useState(0);
+	const [total5, setTotal5] = useState(0);
+	const [total6, setTotal6] = useState(0);
+
 	const [shipping1, setShipping1] = useState(5.89);
 	const [shipping2, setShipping2] = useState(6.2);
 	const [shipping3, setShipping3] = useState(7.49);
@@ -121,28 +137,42 @@ function Home() {
 				<h1>Cupid Delights</h1>
 				<h4>Made with love</h4>
 			</div>
+			<h3 className={styles.banner}>Buy Any 10 Roti Skins get 2 FREE</h3>
+
 			<ShippingInfo></ShippingInfo>
 			<Content
 				checkout={checkout}
 				name1={name1}
 				name2={name2}
 				name3={name3}
+				name4={name4}
+				name5={name5}
+				name6={name6}
 				option1={option1}
 				option2={option2}
 				option3={option3}
+				option4={option4}
+				option5={option5}
+				option6={option6}
 				price1={price1}
 				price2={price2}
 				price3={price3}
+				price4={price4}
+				price5={price5}
+				price6={price6}
 				total={total}
 				total1={total1}
 				total2={total2}
 				total3={total3}
-				shipping1={shipping1}
-				shipping2={shipping2}
-				shipping3={shipping3}
-				nextshipping1={nextshipping1}
-				nextshipping2={nextshipping2}
-				nextshipping3={nextshipping3}
+				total4={total4}
+				total5={total5}
+				total6={total6}
+				// shipping1={shipping1}
+				// shipping2={shipping2}
+				// shipping3={shipping3}
+				// nextshipping1={nextshipping1}
+				// nextshipping2={nextshipping2}
+				// nextshipping3={nextshipping3}
 				shipping={shipping}
 				nextDay={nextDay}
 				quantity={quantity}
@@ -150,21 +180,27 @@ function Home() {
 				setOption1={setOption1}
 				setOption2={setOption2}
 				setOption3={setOption3}
-				setPrice1={setPrice1}
-				setPrice2={setPrice2}
-				setPrice3={setPrice3}
+				setOption4={setOption4}
+				setOption5={setOption5}
+				setOption6={setOption6}
+				// setPrice1={setPrice1}
+				// setPrice2={setPrice2}
+				// setPrice3={setPrice3}
 				setTotal={setTotal}
 				setTotal1={setTotal1}
 				setTotal2={setTotal2}
 				setTotal3={setTotal3}
-				setShipping1={setShipping1}
-				setShipping2={setShipping2}
-				setShipping3={setShipping3}
-				setNextShipping1={setNextShipping1}
-				setNextShipping2={setNextShipping2}
-				setNextShipping3={setNextShipping3}
-				setShipping={setShipping}
-				setNextDay={setNextDay}
+				setTotal4={setTotal4}
+				setTotal5={setTotal5}
+				setTotal6={setTotal6}
+				// setShipping1={setShipping1}
+				// setShipping2={setShipping2}
+				// setShipping3={setShipping3}
+				// setNextShipping1={setNextShipping1}
+				// setNextShipping2={setNextShipping2}
+				// setNextShipping3={setNextShipping3}
+				// setShipping={setShipping}
+				// setNextDay={setNextDay}
 				setQuantity={setQuantity}
 				changeShipType={changeShipType}
 				checkoutFunc={checkoutFunc}
