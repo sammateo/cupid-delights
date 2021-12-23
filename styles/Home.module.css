@@ -6,7 +6,7 @@
 	width: 100%;
 	overflow: visible;
 	display: grid;
-	grid-template-rows: 120px 300px auto 70px 250px;
+	/* grid-template-rows: 120px 300px auto 70px 250px; */
 	grid-auto-flow: dense;
 }
 
@@ -235,7 +235,7 @@
 @media (max-width: 768px) {
 	.container {
 		width: 100%;
-		grid-template-rows: 120px 600px auto 70px 250px;
+		grid-template-rows: 120px auto auto 70px 250px;
 	}
 
 	.options p {

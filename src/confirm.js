@@ -39,7 +39,7 @@ export default function Confirm({
 		style: "currency",
 		currency: "GBP",
 	});
-
+	let shippingtype = nextDay ? "Guaranteed Next Day" : "Express";
 	// let discount = total * 0.9;
 	let body =
 		"Order: \n" +
@@ -98,7 +98,10 @@ export default function Confirm({
 		formatter.format(shipping) +
 		" |\n" +
 		"Total: " +
-		formatter.format(Number(total + shipping));
+		formatter.format(Number(total + shipping)) +
+		" |\n" +
+		"Shipping Type: " +
+		shippingtype;
 
 	function sendEmail(e) {
 		e.preventDefault();
