@@ -53,7 +53,7 @@ function Home() {
 
 	const [shipping, setShipping] = useState(0);
 
-	const [nextDay, setNextDay] = useState(true);
+	const [nextDay, setNextDay] = useState(false);
 	const [quantity, setQuantity] = useState(0);
 
 	// function add(event) {
@@ -213,13 +213,12 @@ function Home() {
 			</div>
 
 			<Footer></Footer>
-			<div className={styles.mask}>
+			{/* <div className={styles.mask}>
 				<div className={styles.title}>
 					<h1>Cupid Delights</h1>
-					{/* <h4>Made with love</h4> */}
 					<p>We are closed until February 8th, 2022</p>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
