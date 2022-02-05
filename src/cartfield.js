@@ -4,22 +4,22 @@ export default function Cartfield({
 	option1,
 	option2,
 	option3,
-	option4,
-	option5,
-	option6,
+	// option4,
+	// option5,
+	// option6,
 	total1,
 	total2,
 	total3,
-	total4,
-	total5,
-	total6,
+	// total4,
+	// total5,
+	// total6,
 	total,
 	name1,
 	name2,
 	name3,
-	name4,
-	name5,
-	name6,
+	// name4,
+	// name5,
+	// name6,
 	quantity,
 	nextDay,
 }) {
@@ -64,7 +64,7 @@ export default function Cartfield({
 				</div>
 			)}
 
-			{option4 == 0 || option4 == null ? null : (
+			{/* {option4 == 0 || option4 == null ? null : (
 				<div className={styles.cartoption}>
 					<p>{name4}</p>
 					<p>Quantity: {option4}</p>
@@ -84,14 +84,14 @@ export default function Cartfield({
 					<p>Quantity: {option6}</p>
 					<p>Price: {formatter.format(total6)}</p>
 				</div>
-			)}
+			)} */}
 
+			{/* // (option4 == 0 || option4 == null) &&
+			// (option5 == 0 || option5 == null) &&
+			// (option6 == 0 || option6 == null)  */}
 			{(option1 == 0 || option1 == null) &&
 			(option2 == 0 || option2 == null) &&
-			(option3 == 0 || option3 == null) &&
-			(option4 == 0 || option4 == null) &&
-			(option5 == 0 || option5 == null) &&
-			(option6 == 0 || option6 == null) ? null : (
+			(option3 == 0 || option3 == null) ? null : (
 				<div className={styles.total}>
 					<p>Cost: {formatter.format(total)}</p>
 					<p>Quantity: {quantity}</p>

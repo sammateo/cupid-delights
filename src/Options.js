@@ -261,7 +261,7 @@ export default function Options({
 				-{" "}
 			</button>
 			{/* Mini Plain */}
-			<br></br>
+			{/* <br></br>
 			<span>{formatter.format(price4)}</span>
 			<p>{name4}</p>{" "}
 			<button
@@ -281,9 +281,9 @@ export default function Options({
 			>
 				{" "}
 				-{" "}
-			</button>
+			</button> */}
 			{/* Mini Dhal */}
-			<br></br>
+			{/* <br></br>
 			<span>{formatter.format(price5)}</span>
 			<p>{name5}</p>{" "}
 			<button
@@ -303,9 +303,9 @@ export default function Options({
 			>
 				{" "}
 				-{" "}
-			</button>
+			</button> */}
 			{/* Mini Buss Up shot */}
-			<br></br>
+			{/* <br></br>
 			<span>{formatter.format(price6)}</span>
 			<p>{name6}</p>{" "}
 			<button
@@ -325,7 +325,7 @@ export default function Options({
 			>
 				{" "}
 				-{" "}
-			</button>
+			</button> */}
 		</div>
 	);
 }

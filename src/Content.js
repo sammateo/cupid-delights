@@ -10,28 +10,28 @@ export default function Content({
 	name1,
 	name2,
 	name3,
-	name4,
-	name5,
-	name6,
+	// name4,
+	// name5,
+	// name6,
 	option1,
 	option2,
 	option3,
-	option4,
-	option5,
-	option6,
+	// option4,
+	// option5,
+	// option6,
 	price1,
 	price2,
 	price3,
-	price4,
-	price5,
-	price6,
+	// price4,
+	// price5,
+	// price6,
 	total,
 	total1,
 	total2,
 	total3,
-	total4,
-	total5,
-	total6,
+	// total4,
+	// total5,
+	// total6,
 	// shipping1,
 	// shipping2,
 	// shipping3,
@@ -45,9 +45,9 @@ export default function Content({
 	setOption1,
 	setOption2,
 	setOption3,
-	setOption4,
-	setOption5,
-	setOption6,
+	// setOption4,
+	// setOption5,
+	// setOption6,
 	// setPrice1,
 	// setPrice2,
 	// setPrice3,
@@ -55,9 +55,9 @@ export default function Content({
 	setTotal1,
 	setTotal2,
 	setTotal3,
-	setTotal4,
-	setTotal5,
-	setTotal6,
+	// setTotal4,
+	// setTotal5,
+	// setTotal6,
 	// setShipping1,
 	// setShipping2,
 	// setShipping3,
@@ -88,28 +88,28 @@ export default function Content({
 				name1={name1}
 				name2={name2}
 				name3={name3}
-				name4={name4}
-				name5={name5}
-				name6={name6}
+				// name4={name4}
+				// name5={name5}
+				// name6={name6}
 				option1={option1}
 				option2={option2}
 				option3={option3}
-				option4={option4}
-				option5={option5}
-				option6={option6}
+				// option4={option4}
+				// option5={option5}
+				// option6={option6}
 				price1={price1}
 				price2={price2}
 				price3={price3}
-				price4={price4}
-				price5={price5}
-				price6={price6}
+				// price4={price4}
+				// price5={price5}
+				// price6={price6}
 				total={total}
 				total1={total1}
 				total2={total2}
 				total3={total3}
-				total4={total4}
-				total5={total5}
-				total6={total6}
+				// total4={total4}
+				// total5={total5}
+				// total6={total6}
 				// shipping1={shipping1}
 				// shipping2={shipping2}
 				// shipping3={shipping3}
@@ -123,9 +123,9 @@ export default function Content({
 				setOption1={setOption1}
 				setOption2={setOption2}
 				setOption3={setOption3}
-				setOption4={setOption4}
-				setOption5={setOption5}
-				setOption6={setOption6}
+				// setOption4={setOption4}
+				// setOption5={setOption5}
+				// setOption6={setOption6}
 				// setPrice1={setPrice1}
 				// setPrice2={setPrice2}
 				// setPrice3={setPrice3}
@@ -133,9 +133,9 @@ export default function Content({
 				setTotal1={setTotal1}
 				setTotal2={setTotal2}
 				setTotal3={setTotal3}
-				setTotal4={setTotal4}
-				setTotal5={setTotal5}
-				setTotal6={setTotal6}
+				// setTotal4={setTotal4}
+				// setTotal5={setTotal5}
+				// setTotal6={setTotal6}
 				// setShipping1={setShipping1}
 				// setShipping2={setShipping2}
 				// setShipping3={setShipping3}
@@ -156,25 +156,25 @@ export default function Content({
 					price2={price2}
 					option3={option3}
 					price3={price3}
-					option4={option4}
-					price4={price4}
-					option5={option5}
-					price5={price5}
-					option6={option6}
-					price6={price6}
+					// option4={option4}
+					// price4={price4}
+					// option5={option5}
+					// price5={price5}
+					// option6={option6}
+					// price6={price6}
 					total1={total1}
 					total2={total2}
 					total3={total3}
-					total4={total4}
-					total5={total5}
-					total6={total6}
+					// total4={total4}
+					// total5={total5}
+					// total6={total6}
 					total={total}
 					name1={name1}
 					name2={name2}
 					name3={name3}
-					name4={name4}
-					name5={name5}
-					name6={name6}
+					// name4={name4}
+					// name5={name5}
+					// name6={name6}
 					quantity={quantity}
 					nextDay={nextDay}
 				/>
@@ -190,28 +190,28 @@ export default function Content({
 					option1={option1}
 					option2={option2}
 					option3={option3}
-					option4={option4}
-					option5={option5}
-					option6={option6}
+					// option4={option4}
+					// option5={option5}
+					// option6={option6}
 					price1={price1}
 					price2={price2}
 					price3={price3}
-					price4={price4}
-					price5={price5}
-					price6={price6}
+					// price4={price4}
+					// price5={price5}
+					// price6={price6}
 					total1={total1}
 					total2={total2}
 					total3={total3}
-					total4={total4}
-					total5={total5}
-					total6={total6}
+					// total4={total4}
+					// total5={total5}
+					// total6={total6}
 					total={total}
 					name1={name1}
 					name2={name2}
 					name3={name3}
-					name4={name4}
-					name5={name5}
-					name6={name6}
+					// name4={name4}
+					// name5={name5}
+					// name6={name6}
 					quantity={quantity}
 					shipping={shipping}
 					nextDay={nextDay}
