@@ -137,7 +137,9 @@ function Home() {
 				<h1>Cupid Delights</h1>
 				<h4>Made with love</h4>
 			</div>
-			{/* <h3 className={styles.banner}>Buy Any 10 Roti Skins Get 2 FREE</h3> */}
+			<h3 className={styles.banner}>
+				Closed for Easter holidays, orders will be shipped on 26th April 2022.
+			</h3>
 
 			<ShippingInfo></ShippingInfo>
 			<Content
@@ -213,7 +215,7 @@ function Home() {
 			</div>
 
 			<Footer></Footer>
-			<div className={styles.mask}>
+			{/* <div className={styles.mask}>
 				<div className={styles.title}>
 					<h1>Cupid Delights</h1>
 					<p>
@@ -221,7 +223,7 @@ function Home() {
 						2022.
 					</p>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
