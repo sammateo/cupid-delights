@@ -137,9 +137,9 @@ function Home() {
 				<h1>Cupid Delights</h1>
 				<h4>Made with love</h4>
 			</div>
-			<h3 className={styles.banner}>
+			{/* <h3 className={styles.banner}>
 				Closed for Easter holidays, orders will be shipped on 26th April 2022.
-			</h3>
+			</h3> */}
 
 			<ShippingInfo></ShippingInfo>
 			<Content
