@@ -32,13 +32,13 @@ export default function Cartfield({
 		//maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
 	});
 
-	const [shipping1, setShipping1] = useState(5.89);
-	const [shipping2, setShipping2] = useState(6.2);
-	const [shipping3, setShipping3] = useState(7.49);
+	const [shipping1, setShipping1] = useState(6.09);
+	const [shipping2, setShipping2] = useState(6.4);
+	const [shipping3, setShipping3] = useState(7.69);
 
-	const [nextshipping1, setNextShipping1] = useState(8.4);
-	const [nextshipping2, setNextShipping2] = useState(8.6);
-	const [nextshipping3, setNextShipping3] = useState(9.89);
+	const [nextshipping1, setNextShipping1] = useState(8.6);
+	const [nextshipping2, setNextShipping2] = useState(8.8);
+	const [nextshipping3, setNextShipping3] = useState(10.09);
 
 	return (
 		<div className={styles.container}>
