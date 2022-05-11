@@ -76,12 +76,20 @@ export default function Content({
 				<img src="/logo.jpeg" alt="logo" width={90} height={90} />
 			</div>
 			<h2>Order Here</h2>
-
+			<p className={styles.note}>
+				<span style={{ color: "red", display: "block" }}>Disclaimer:</span>
+				Please be aware that our food which is prepared in a home setting may
+				contain or come into contact with common allergens, such as dairy,
+				wheat, peanuts, sesame or wheat.
+			</p>
 			<p style={{ color: "red" }} className={styles.note}>
 				Note:{" "}
 			</p>
 			<p className={styles.note}>Minimum order is 5 roti skins</p>
-			<p className={styles.note}>Shipping done on Tuesdays</p>
+			<p className={styles.note}>
+				Shipping done on Tuesdays - cut off is Monday at 2pm
+			</p>
+
 			<p className={styles.note}>Buss Up Shot Contains dairy products</p>
 			<Options
 				// checkout={checkout}
