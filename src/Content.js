@@ -85,7 +85,7 @@ export default function Content({
 			<p style={{ color: "red" }} className={styles.note}>
 				Note:{" "}
 			</p>
-			<p className={styles.note}>Minimum order is 5 roti skins</p>
+			<p className={styles.note}>Minimum order is 6 roti skins</p>
 			<p className={styles.note}>
 				Shipping done on Tuesdays - cut off is Monday at 2pm
 			</p>

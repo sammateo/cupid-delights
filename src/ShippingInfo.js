@@ -6,18 +6,19 @@ export default function ShippingInfo() {
 		currency: "GBP",
 	});
 
-	const [shipping1, setShipping1] = useState(6.09);
-	const [shipping2, setShipping2] = useState(6.4);
-	const [shipping3, setShipping3] = useState(7.69);
+	const [shipping1, setShipping1] = useState(6.49);
+	const [shipping2, setShipping2] = useState(6.8);
+	const [shipping3, setShipping3] = useState(8.09);
 
-	const [nextshipping1, setNextShipping1] = useState(8.6);
-	const [nextshipping2, setNextShipping2] = useState(8.8);
-	const [nextshipping3, setNextShipping3] = useState(10.09);
+	const [nextshipping1, setNextShipping1] = useState(9.0);
+	const [nextshipping2, setNextShipping2] = useState(9.2);
+	const [nextshipping3, setNextShipping3] = useState(10.49);
+
 	return (
 		<div className={styles.additionalInfo}>
 			<div className={styles.shippingInfo}>
 				<h2>Express Shipping</h2>
-				<p>5-12 rotis </p>
+				<p>6-12 rotis </p>
 				<p>{formatter.format(shipping1)}</p>
 				<p>13-19 rotis</p>
 				<p>{formatter.format(shipping2)}</p>
@@ -28,7 +29,7 @@ export default function ShippingInfo() {
 
 			<div className={styles.shippingInfo + " " + styles.guaranteed}>
 				<h2> Guaranteed Next Day Shipping</h2>
-				<p>5-12 rotis </p>
+				<p>6-12 rotis </p>
 				<p>{formatter.format(nextshipping1)}</p>
 				<p>13-19 rotis</p>
 				<p>{formatter.format(nextshipping2)}</p>

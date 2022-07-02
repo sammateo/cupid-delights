@@ -166,11 +166,11 @@ export default function Options({
 	}
 
 	// function checkoutFunc() {
-	// 	if (quantity < 5) {
-	// 		alert("Minimum order is 5 roti skins");
+	// 	if (quantity < 6) {
+	// 		alert("Minimum order is 6 roti skins");
 	// 		setCheckout(false);
 	// 	}
-	// 	if (quantity >= 5 && quantity <= 12) {
+	// 	if (quantity >= 6 && quantity <= 12) {
 	// 		nextDay ? setShipping(nextshipping1) : setShipping(shipping1);
 	// 		setCheckout(true);
 	// 	}

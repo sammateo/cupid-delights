@@ -43,13 +43,13 @@ function Home() {
 	// const [total5, setTotal5] = useState(0);
 	// const [total6, setTotal6] = useState(0);
 
-	const [shipping1, setShipping1] = useState(6.09);
-	const [shipping2, setShipping2] = useState(6.4);
-	const [shipping3, setShipping3] = useState(7.69);
+	const [shipping1, setShipping1] = useState(6.49);
+	const [shipping2, setShipping2] = useState(6.8);
+	const [shipping3, setShipping3] = useState(8.09);
 
-	const [nextshipping1, setNextShipping1] = useState(8.6);
-	const [nextshipping2, setNextShipping2] = useState(8.8);
-	const [nextshipping3, setNextShipping3] = useState(10.09);
+	const [nextshipping1, setNextShipping1] = useState(9.0);
+	const [nextshipping2, setNextShipping2] = useState(9.2);
+	const [nextshipping3, setNextShipping3] = useState(10.49);
 
 	const [shipping, setShipping] = useState(0);
 
@@ -95,11 +95,11 @@ function Home() {
 	// }
 
 	function checkoutFunc() {
-		if (quantity < 5) {
-			alert("Minimum order is 5 roti skins");
+		if (quantity < 6) {
+			alert("Minimum order is 6 roti skins");
 			setCheckout(false);
 		}
-		if (quantity >= 5 && quantity <= 12) {
+		if (quantity >= 6 && quantity <= 12) {
 			nextDay ? setShipping(nextshipping1) : setShipping(shipping1);
 			setCheckout(true);
 		}
