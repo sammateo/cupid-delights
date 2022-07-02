@@ -78,7 +78,7 @@ export default function Content({
 			<h2>Order Here</h2>
 			<p className={styles.note}>
 				<span style={{ color: "red", display: "block" }}>Disclaimer:</span>
-				Please be aware that our food which is prepared in a home setting may
+				Please be aware that our food is prepared in a home setting and may
 				contain or come into contact with common allergens, such as dairy,
 				wheat, peanuts, sesame or wheat.
 			</p>
@@ -90,7 +90,7 @@ export default function Content({
 				Shipping done on Tuesdays - cut off is Monday at 2pm
 			</p>
 
-			<p className={styles.note}>Buss Up Shot Contains dairy products</p>
+			{/* <p className={styles.note}>Buss Up Shot Contains dairy products</p> */}
 			<Options
 				// checkout={checkout}
 				name1={name1}
