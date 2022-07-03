@@ -215,15 +215,12 @@ function Home() {
 			</div>
 
 			<Footer></Footer>
-			{/* <div className={styles.mask}>
+			<div className={styles.mask}>
 				<div className={styles.title}>
 					<h1>Cupid Delights</h1>
-					<p>
-						Closed for Easter holidays, orders will be shipped on 26th April
-						2022.
-					</p>
+					<p>Temporarily closed. We are moving.</p>
 				</div>
-			</div> */}
+			</div>
 		</div>
 	);
 }
