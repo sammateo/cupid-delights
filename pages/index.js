@@ -215,12 +215,12 @@ function Home() {
 			</div>
 
 			<Footer></Footer>
-			<div className={styles.mask}>
+			{/* <div className={styles.mask}>
 				<div className={styles.title}>
 					<h1>Cupid Delights</h1>
 					<p>Temporarily closed. We are moving.</p>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
