@@ -6,13 +6,13 @@ export default function ShippingInfo() {
 		currency: "GBP",
 	});
 
-	const [shipping1, setShipping1] = useState(6.49);
-	const [shipping2, setShipping2] = useState(6.8);
-	const [shipping3, setShipping3] = useState(8.09);
+	const [shipping1, setShipping1] = useState(6.69);
+	const [shipping2, setShipping2] = useState(7);
+	const [shipping3, setShipping3] = useState(8.29);
 
-	const [nextshipping1, setNextShipping1] = useState(9.0);
-	const [nextshipping2, setNextShipping2] = useState(9.2);
-	const [nextshipping3, setNextShipping3] = useState(10.49);
+	const [nextshipping1, setNextShipping1] = useState(9.2);
+	const [nextshipping2, setNextShipping2] = useState(9.4);
+	const [nextshipping3, setNextShipping3] = useState(10.69);
 
 	return (
 		<div className={styles.additionalInfo}>

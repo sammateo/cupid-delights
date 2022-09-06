@@ -28,9 +28,9 @@ function Home() {
 	// const [option5, setOption5] = useState(0);
 	// const [option6, setOption6] = useState(0);
 
-	const [price1, setPrice1] = useState(2); //price in Pound
-	const [price2, setPrice2] = useState(3);
-	const [price3, setPrice3] = useState(3);
+	const [price1, setPrice1] = useState(2.2); //price in Pound
+	const [price2, setPrice2] = useState(3.2);
+	const [price3, setPrice3] = useState(3.2);
 	// const [price4, setPrice4] = useState(1.5);
 	// const [price5, setPrice5] = useState(2.5);
 	// const [price6, setPrice6] = useState(2.5);
@@ -43,13 +43,13 @@ function Home() {
 	// const [total5, setTotal5] = useState(0);
 	// const [total6, setTotal6] = useState(0);
 
-	const [shipping1, setShipping1] = useState(6.49);
-	const [shipping2, setShipping2] = useState(6.8);
-	const [shipping3, setShipping3] = useState(8.09);
+	const [shipping1, setShipping1] = useState(6.69);
+	const [shipping2, setShipping2] = useState(7);
+	const [shipping3, setShipping3] = useState(8.29);
 
-	const [nextshipping1, setNextShipping1] = useState(9.0);
-	const [nextshipping2, setNextShipping2] = useState(9.2);
-	const [nextshipping3, setNextShipping3] = useState(10.49);
+	const [nextshipping1, setNextShipping1] = useState(9.2);
+	const [nextshipping2, setNextShipping2] = useState(9.4);
+	const [nextshipping3, setNextShipping3] = useState(10.69);
 
 	const [shipping, setShipping] = useState(0);
 
