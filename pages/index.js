@@ -43,13 +43,13 @@ function Home() {
 	// const [total5, setTotal5] = useState(0);
 	// const [total6, setTotal6] = useState(0);
 
-	const [shipping1, setShipping1] = useState(6.69);
-	const [shipping2, setShipping2] = useState(7);
-	const [shipping3, setShipping3] = useState(8.29);
+	const [shipping1, setShipping1] = useState(6.89);
+	const [shipping2, setShipping2] = useState(7.2);
+	const [shipping3, setShipping3] = useState(8.49);
 
-	const [nextshipping1, setNextShipping1] = useState(9.2);
-	const [nextshipping2, setNextShipping2] = useState(9.4);
-	const [nextshipping3, setNextShipping3] = useState(10.69);
+	const [nextshipping1, setNextShipping1] = useState(9.4);
+	const [nextshipping2, setNextShipping2] = useState(9.6);
+	const [nextshipping3, setNextShipping3] = useState(10.89);
 
 	const [shipping, setShipping] = useState(0);
 
