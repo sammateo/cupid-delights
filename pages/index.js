@@ -53,7 +53,7 @@ function Home() {
 
 	const [shipping, setShipping] = useState(0);
 
-	const [nextDay, setNextDay] = useState(false);
+	const [nextDay, setNextDay] = useState(true);
 	const [quantity, setQuantity] = useState(0);
 
 	// function add(event) {

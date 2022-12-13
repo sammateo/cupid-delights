@@ -2,7 +2,7 @@ import styles from "../styles/Shipping.module.css";
 export default function ShippingType({ changeShipType }) {
 	return (
 		<div className={styles.nextDay}>
-			<label htmlFor="nextDay">Shipping Type</label>
+			{/* <label htmlFor="nextDay">Shipping Type</label>
 			<p>
 				<input
 					type="radio"
@@ -11,7 +11,7 @@ export default function ShippingType({ changeShipType }) {
 					onChange={changeShipType}
 				></input>
 				<span>Express</span>
-			</p>
+			</p> */}
 			<p>
 				<input
 					type="radio"
