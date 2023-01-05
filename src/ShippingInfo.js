@@ -16,7 +16,7 @@ export default function ShippingInfo() {
 
 	return (
 		<div className={styles.additionalInfo}>
-			{/* <div className={styles.shippingInfo}>
+			<div className={styles.shippingInfo}>
 				<h2>Express Shipping</h2>
 				<p>6-12 rotis </p>
 				<p>{formatter.format(shipping1)}</p>
@@ -25,7 +25,7 @@ export default function ShippingInfo() {
 				<p>20-40 rotis</p>
 				<p>{formatter.format(shipping3)}</p>
 				<p className={styles.larger}>Contact us for larger orders</p>
-			</div> */}
+			</div>
 
 			<div className={styles.shippingInfo + " " + styles.guaranteed}>
 				<h2> Guaranteed Next Day Shipping</h2>
