@@ -137,7 +137,9 @@ function Home() {
 				<h1>Cupid Delights</h1>
 				<h4>Made with love</h4>
 			</div>
-			<h3 className={styles.banner}>Buy 13 or more and get 2 FREE!</h3>
+			<h3 className={styles.banner}>
+				Orders placed will be shipped on 28th February 2023
+			</h3>
 
 			<ShippingInfo></ShippingInfo>
 			<Content
