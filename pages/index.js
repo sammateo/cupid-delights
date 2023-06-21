@@ -137,7 +137,9 @@ function Home() {
 				<h1>Cupid Delights</h1>
 				<h4>Made with love</h4>
 			</div>
-			<h3 className={styles.banner}></h3>
+			<h3 className={styles.banner}>
+				We're On Holiday ~ orders placed will be shipped on 11th July 2023
+			</h3>
 
 			<ShippingInfo></ShippingInfo>
 			<Content
