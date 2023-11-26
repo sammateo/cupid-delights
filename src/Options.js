@@ -153,7 +153,7 @@ export default function Options({
 
   return (
     <div className={styles.options}>
-      <span>{formatter.format(price1)}</span>
+      <span>{formatter.format(price1 * quantityMultiplier)}</span>
       <p>{name1}</p>{" "}
       <button
         name="option1"
@@ -174,7 +174,7 @@ export default function Options({
         -{" "}
       </button>
       <br></br>
-      <span>{formatter.format(price2)}</span>
+      <span>{formatter.format(price2 * quantityMultiplier)}</span>
       <p>{name2}</p>{" "}
       <button
         value={option2}
@@ -196,7 +196,7 @@ export default function Options({
       </button>
       {/* Buss Up Shot */}
       <br></br>
-      <span>{formatter.format(price3)}</span>
+      <span>{formatter.format(price3 * quantityMultiplier)}</span>
       <p>{name3}</p>{" "}
       <button
         value={option3}
