@@ -28,9 +28,9 @@ function Home() {
   // const [option5, setOption5] = useState(0);
   // const [option6, setOption6] = useState(0);
 
-  const [price1, setPrice1] = useState(2); //price in Pound //2.2
-  const [price2, setPrice2] = useState(3); //3.2
-  const [price3, setPrice3] = useState(3); //3.2
+  const [price1, setPrice1] = useState(1.995); //price in Pound //2.2
+  const [price2, setPrice2] = useState(2.995); //3.2
+  const [price3, setPrice3] = useState(2.995); //3.2
   // const [price4, setPrice4] = useState(1.5);
   // const [price5, setPrice5] = useState(2.5);
   // const [price6, setPrice6] = useState(2.5);
@@ -137,9 +137,7 @@ function Home() {
         <h1>Cupid Delights</h1>
         <h4>Made with love</h4>
       </div>
-      <h3 className={styles.banner}>
-        {/* We're On Holiday ~ orders placed will be shipped on 11th July 2023 */}
-      </h3>
+      <h3 className={styles.banner}>New Christmas sale options by the pack</h3>
 
       <ShippingInfo></ShippingInfo>
       <Content
