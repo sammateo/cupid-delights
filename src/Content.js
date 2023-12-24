@@ -85,7 +85,9 @@ export default function Content({
 			<p style={{ color: "red" }} className={styles.note}>
 				Note:{" "}
 			</p>
-			<p className={styles.note}>Shipping done Monday to Wednesday via UPS</p>
+			<p className={styles.note}>
+				Shipping will resume to Tuesdays with Monday 5pm as cut off
+			</p>
 
 			{/* <p className={styles.note}>Buss Up Shot Contains dairy products</p> */}
 			<Options
