@@ -77,10 +77,12 @@ export default function Content({
 			</div>
 			<h2>Order Here</h2>
 			<p className={styles.note}>
-				<span style={{ color: "red", display: "block" }}>Disclaimer:</span>
-				Please be aware that our food is prepared in a home setting and may
-				contain or come into contact with common allergens, such as dairy,
-				wheat, peanuts, sesame or wheat.
+				<span style={{ color: "red", display: "block" }}>
+					Disclaimer:
+				</span>
+				Please be aware that our food is prepared in a home setting and
+				may contain or come into contact with common allergens, such as
+				dairy, wheat, peanuts, sesame or wheat.
 			</p>
 			<p style={{ color: "red" }} className={styles.note}>
 				Note:{" "}
@@ -153,7 +155,10 @@ export default function Content({
 				// setNextDay={setNextDay}
 				setQuantity={setQuantity}
 			></Options>
-			<ShippingType changeShipType={changeShipType}></ShippingType>
+			<ShippingType
+				changeShipType={changeShipType}
+				nextDay={nextDay}
+			></ShippingType>
 			<div className={styles.cart}>
 				{total == 0 ? <h2>Cart Empty</h2> : <h2>Cart</h2>}
 				<Cartfield

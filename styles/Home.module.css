@@ -11,26 +11,29 @@
 }
 
 .title {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	text-align: center;
 	background-color: rgb(255, 255, 255);
 	align-items: center;
 	justify-content: center;
 	padding: 10px;
 	border-bottom: 4px solid red;
-	/* padding:30px; */
+	/* padding: 30px; */
 }
 
 .title h1 {
 	display: block;
-	width: 100px;
+	width: 150px;
 	margin: auto;
 	font-family: Brush Script MT, Brush Script Std, cursive;
+	text-align: center;
 }
 
 .title h4 {
 	word-spacing: 10px;
 	color: red;
+	text-align: center;
 }
 
 .banner {
@@ -40,6 +43,8 @@
 	width: 100%;
 	text-align: center;
 	color: red;
+	display: flex;
+	flex-direction: column;
 }
 
 .content {

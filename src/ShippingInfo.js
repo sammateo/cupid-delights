@@ -1,18 +1,28 @@
 import styles from "../styles/Shipping.module.css";
-import { useState } from "react";
+// import { useState } from "react";
+
+export const shipping1 = 7.52;
+export const shipping2 = 8.12;
+export const shipping3 = 9.6;
+
+//next day
+export const nextshipping1 = 8.6;
+export const nextshipping2 = 9.34;
+export const nextshipping3 = 11.89;
+
 export default function ShippingInfo() {
 	var formatter = new Intl.NumberFormat("en-IN", {
 		style: "currency",
 		currency: "GBP",
 	});
 
-	const [shipping1, setShipping1] = useState(6.89);
-	const [shipping2, setShipping2] = useState(7.2);
-	const [shipping3, setShipping3] = useState(8.49);
+	// const [shipping1, setShipping1] = useState(7.52);
+	// const [shipping2, setShipping2] = useState(8.12);
+	// const [shipping3, setShipping3] = useState(9.6);
 
-	const [nextshipping1, setNextShipping1] = useState(9.4);
-	const [nextshipping2, setNextShipping2] = useState(9.6);
-	const [nextshipping3, setNextShipping3] = useState(10.89);
+	// const [nextshipping1, setNextShipping1] = useState(8.6);
+	// const [nextshipping2, setNextShipping2] = useState(9.34);
+	// const [nextshipping3, setNextShipping3] = useState(11.89);
 
 	return (
 		<div className={styles.additionalInfo}>

@@ -6,6 +6,14 @@ import { init } from "emailjs-com";
 import ShippingInfo from "../src/ShippingInfo";
 import Content from "../src/Content";
 import Footer from "../src/Footer";
+import {
+	shipping1,
+	shipping2,
+	shipping3,
+	nextshipping1,
+	nextshipping2,
+	nextshipping3,
+} from "../src/ShippingInfo";
 init("user_I8maVpumJJ5NPgSnOdsDM");
 
 function Home() {
@@ -43,13 +51,13 @@ function Home() {
 	// const [total5, setTotal5] = useState(0);
 	// const [total6, setTotal6] = useState(0);
 
-	const [shipping1, setShipping1] = useState(6.89);
-	const [shipping2, setShipping2] = useState(7.2);
-	const [shipping3, setShipping3] = useState(8.49);
+	// const [shipping1, setShipping1] = useState(6.89);
+	// const [shipping2, setShipping2] = useState(7.2);
+	// const [shipping3, setShipping3] = useState(8.49);
 
-	const [nextshipping1, setNextShipping1] = useState(9.4);
-	const [nextshipping2, setNextShipping2] = useState(9.6);
-	const [nextshipping3, setNextShipping3] = useState(10.89);
+	// const [nextshipping1, setNextShipping1] = useState(9.4);
+	// const [nextshipping2, setNextShipping2] = useState(9.6);
+	// const [nextshipping3, setNextShipping3] = useState(10.89);
 
 	const [shipping, setShipping] = useState(0);
 
@@ -138,7 +146,13 @@ function Home() {
 				<h4>Made with love</h4>
 			</div>
 			<h3 className={styles.banner}>
-				Orders placed now will not be shipped until we reopen in January 2024.
+				<span>
+					Celebrating Black History Month & SVG's Independence
+				</span>
+				<span>
+					Get 10% off all orders placed from 21st to 31st October,
+					2024
+				</span>{" "}
 			</h3>
 
 			<ShippingInfo></ShippingInfo>
