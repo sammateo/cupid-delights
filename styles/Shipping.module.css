@@ -17,9 +17,10 @@
 	line-height: 30px;
 	display: absolute;
 	background-color: rgba(0, 0, 0, 1);
-	box-shadow: 10px 10px 10px black;
+	box-shadow: 5px 5px 10px black;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 50px 50px 50px 50px;
+	border-radius: 5px;
 }
 
 .shippingInfo h2 {

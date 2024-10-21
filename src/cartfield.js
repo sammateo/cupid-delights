@@ -110,7 +110,7 @@ export default function Cartfield({
 							? formatter.format(shipping2)
 							: quantity >= 20 && quantity <= 40 && !nextDay
 							? formatter.format(shipping3)
-							: quantity >= 5 && quantity <= 12 && nextDay
+							: quantity >= 6 && quantity <= 12 && nextDay
 							? formatter.format(nextshipping1)
 							: quantity >= 13 && quantity <= 19 && nextDay
 							? formatter.format(nextshipping2)
