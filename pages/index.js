@@ -146,13 +146,8 @@ function Home() {
 				<h4>Made with love</h4>
 			</div>
 			<h3 className={styles.banner}>
-				<span>
-					Celebrating Black History Month & SVG's Independence
-				</span>
-				<span>
-					Get 10% off all orders placed from 21st to 31st October,
-					2024
-				</span>{" "}
+				<span>Shipped Tuesdays delivered on Wednesdays</span>
+				<span>Order By Monday 5pm</span>{" "}
 			</h3>
 
 			<ShippingInfo></ShippingInfo>
