@@ -41,7 +41,7 @@ export default function Confirm({
 	});
 	let shippingtype = nextDay ? "Guaranteed Next Day" : "Express";
 	let discount = total * 0.9;
-	const quantityMultiplier = 6;
+	const quantityMultiplier = 1; //6;
 
 	let body =
 		"Order: \n" +
@@ -51,21 +51,21 @@ export default function Confirm({
 		"(s)" +
 		" @ " +
 		formatter.format(price1 * quantityMultiplier) +
-		" per packet(6 rotis) |\n" +
+		" |\n" +
 		option2 +
 		" of " +
 		name2 +
 		"(s)" +
 		" @ " +
 		formatter.format(price2 * quantityMultiplier) +
-		" per packet(6 rotis) |\n" +
+		" |\n" +
 		option3 +
 		" of " +
 		name3 +
 		"(s)" +
 		" @ " +
 		formatter.format(price3 * quantityMultiplier) +
-		" per packet(6 rotis) |\n" +
+		" |\n" +
 		// option4 +
 		// " of " +
 		// name4 +
@@ -90,9 +90,9 @@ export default function Confirm({
 		"Cost: " +
 		formatter.format(total) +
 		" |\n" +
-		"10% Discounted Applied: " +
-		formatter.format(discount) +
-		" |\n" +
+		// "10% Discounted Applied: " +
+		// formatter.format(discount) +
+		// " |\n" +
 		"Quantity: " +
 		quantity +
 		" |\n" +
@@ -100,8 +100,8 @@ export default function Confirm({
 		formatter.format(shipping) +
 		" |\n" +
 		"Total: " +
-		// formatter.format(Number(total + shipping)) +
-		formatter.format(Number(discount + shipping)) +
+		formatter.format(Number(total + shipping)) +
+		// formatter.format(Number(discount + shipping)) +
 		" |\n" +
 		"Shipping Type: " +
 		shippingtype;

@@ -82,14 +82,14 @@ export default function Content({
 				</span>
 				Please be aware that our food is prepared in a home setting and
 				may contain or come into contact with common allergens, such as
-				dairy, wheat, peanuts, sesame or wheat.
+				milk, wheat, peanuts, sesame or soya.
 			</p>
-			<p style={{ color: "red" }} className={styles.note}>
+			{/* <p style={{ color: "red" }} className={styles.note}>
 				Note:{" "}
 			</p>
 			<p className={styles.note}>
 				Shipping will resume to Tuesdays with Monday 5pm as cut off
-			</p>
+			</p> */}
 
 			{/* <p className={styles.note}>Buss Up Shot Contains dairy products</p> */}
 			<Options
