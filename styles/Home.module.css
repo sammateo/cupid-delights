@@ -42,7 +42,7 @@
 	top: 120px;
 	width: 100%;
 	text-align: center;
-	color: red;
+	color: #7e1946;
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
@@ -58,14 +58,18 @@
 	text-align: center;
 	line-height: 4;
 	background-color: rgb(255, 255, 255);
-	box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.233);
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.233);
+	box-shadow: 5px 5px 2px rgba(12, 98, 145, 0.233);
 	/* box-shadow:10px 10px 10px rgba(255, 255, 255, 0.5); */
-	border: 3px solid black;
+	/* border: 3px solid black; */
 	border-radius: 5px;
 }
 
 .content .note {
 	line-height: normal;
+	padding: 0px 20px;
+	max-width: 600px;
+	margin: auto;
 }
 
 .logo {
@@ -189,15 +193,16 @@
 
 .orderButton {
 	margin-top: 40px;
-	padding: 10px;
-	background-color: black;
+	padding: 10px 50px;
+	background-color: #0c6291;
 	color: white;
 	font-weight: bold;
-	border: 2px solid black;
+	border: 2px solid #0c6291;
+	border-radius: 25px;
 }
 .orderButton:active {
 	background-color: white;
-	color: black;
+	color: #0c6291;
 }
 /* .paypalbuttons {
 	display: block;

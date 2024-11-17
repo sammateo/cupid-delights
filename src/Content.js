@@ -77,7 +77,13 @@ export default function Content({
 			</div>
 			<h2>Order Here</h2>
 			<p className={styles.note}>
-				<span style={{ color: "red", display: "block" }}>
+				<span
+					style={{
+						color: "#7e1946",
+						display: "block",
+						fontWeight: "bold",
+					}}
+				>
 					Disclaimer:
 				</span>
 				Please be aware that our food is prepared in a home setting and
