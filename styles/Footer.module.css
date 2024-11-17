@@ -1,7 +1,7 @@
 .footer {
 	background-color: white;
 	margin-top: 50px;
-	border-top: 4px solid red;
+	border-top: 4px solid #7e1946;
 	padding: 10px;
 	display: grid;
 	grid-template-columns: 1fr 2fr 2fr;
@@ -10,7 +10,7 @@
 @media (max-width: 768px) {
 	.footer {
 		width: 100%;
-		border-bottom: 4px solid red;
+		border-bottom: 4px solid #7e1946;
 		grid-template-columns: 1fr 2fr;
 	}
 }

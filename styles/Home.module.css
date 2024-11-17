@@ -18,7 +18,7 @@
 	align-items: center;
 	justify-content: center;
 	padding: 10px;
-	border-bottom: 4px solid red;
+	border-bottom: 4px solid #7e1946;
 	/* padding: 30px; */
 }
 
@@ -220,14 +220,16 @@
 
 .galleryButtonContainer button {
 	background-color: white;
-	border: 2px solid black;
+	border: 2px solid #0c6291;
 	font-weight: bold;
 	width: 150px;
-	height: 50px;
+	/* height: 50px; */
+	border-radius: 25px;
+	padding: 10px 40px;
 }
 
 .galleryButtonContainer button:active {
-	background-color: black;
+	background-color: #0c6291;
 	color: white;
 	border: 2px solid white;
 }
