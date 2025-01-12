@@ -224,13 +224,13 @@ function Home() {
 			</div>
 
 			<Footer></Footer>
-			<div className={styles.mask}>
+			{/* <div className={styles.mask}>
 				<div className={styles.title}>
 					<h1>Cupid Delights</h1>
 					<p>Sorry, we are now closed.</p>
 					<p>We are taking a well-needed break until the new year.</p>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
