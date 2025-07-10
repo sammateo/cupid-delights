@@ -146,8 +146,12 @@ function Home() {
 				<h4>Made with love</h4>
 			</div>
 			<h3 className={styles.banner}>
-				<span>Shipped Tuesdays delivered on Wednesdays</span>
-				<span>Order By Monday 5pm</span>{" "}
+				{/* <span>Shipped Tuesdays delivered on Wednesdays</span>
+				<span>Order By Monday 5pm</span>{" "} */}
+				<span>
+					We have taken a little holiday so any orders placed now will
+					not be shipped until 22nd July 2025!
+				</span>
 			</h3>
 
 			<ShippingInfo></ShippingInfo>
