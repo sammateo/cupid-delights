@@ -149,8 +149,8 @@ function Home() {
 				{/* <span>Shipped Tuesdays delivered on Wednesdays</span>
 				<span>Order By Monday 5pm</span>{" "} */}
 				<span>
-					We have taken a little holiday so any orders placed now will
-					not be shipped until 22nd July 2025!
+					We are currently closed for our holiday. Any orders placed
+					now will not be shipped until 9th September 2025!
 				</span>
 			</h3>
 
