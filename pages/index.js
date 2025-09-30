@@ -145,14 +145,14 @@ function Home() {
 				<h1>Cupid Delights</h1>
 				<h4>Made with love</h4>
 			</div>
-			<h3 className={styles.banner}>
-				{/* <span>Shipped Tuesdays delivered on Wednesdays</span>
+			{/* <h3 className={styles.banner}> */}
+			{/* <span>Shipped Tuesdays delivered on Wednesdays</span>
 				<span>Order By Monday 5pm</span>{" "} */}
-				<span>
+			{/* <span>
 					We are currently closed for our holiday. Any orders placed
 					now will not be shipped until 9th September 2025!
-				</span>
-			</h3>
+				</span> */}
+			{/* </h3> */}
 
 			<ShippingInfo></ShippingInfo>
 			<Content
